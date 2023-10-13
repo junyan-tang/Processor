@@ -1,0 +1,15 @@
+reset:all register values should be 0 and program execution begins from
+instruction memory address 0. Instruction and data memories are not reset.
+
+Control Circuit
+
+add:
+
+addi
+sub
+and
+or
+sll
+sra
+sw
+lw

@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "bits32[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bits32[15]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bits16[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
