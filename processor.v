@@ -96,14 +96,14 @@ module processor(
 	 wire [16:0] Immediate;
 	 
 	 //signal
-	 wire Rwe,Rdst,ALUinB,DMwe,Rwd;
+	 wire Rwe,ALUinB,DMwe,Rwd;
 	 
 	 //I-type
 	 wire [31:0] Immediate_full;
 	 wire [31:0] data_B;
 	 
 	 //Regfile
-	 wire [4:0] Reg_d;
+	 wire [4:0] Reg_t;
 	 wire [31:0] Reg_datawrite;
 	 
 	 //alu
@@ -122,12 +122,12 @@ module processor(
 	 
 	 
 	 //Regfile
-	 assign Reg_d = Rdst?rd:rt;
+	 assign Reg_t = Rdst?rd:rt;
 	 
     assign ctrl_writeEnable = Rwe;
-    assign ctrl_writeReg = Reg_d;
+    assign ctrl_writeReg = rd;
 	 assign ctrl_readRegA = rs;
-	 assign ctrl_readRegB = rt;
+	 assign ctrl_readRegB = Reg_t;
     assign data_writeReg = Rwd?ALU_result:q_dmem;
 	 
 	 //I-type
