@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
-// DATE "10/12/2023 21:45:42"
+// DATE "10/14/2023 23:13:11"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -30,9 +30,9 @@
 `timescale 1 ps/ 1 ps
 
 module SX (
-	bits16,
+	bits17,
 	bits32);
-input 	[15:0] bits16;
+input 	[16:0] bits17;
 output 	[31:0] bits32;
 
 wire gnd;
@@ -78,26 +78,27 @@ wire \bits32[28]~output_o ;
 wire \bits32[29]~output_o ;
 wire \bits32[30]~output_o ;
 wire \bits32[31]~output_o ;
-wire \bits16[0]~input_o ;
-wire \bits16[1]~input_o ;
-wire \bits16[2]~input_o ;
-wire \bits16[3]~input_o ;
-wire \bits16[4]~input_o ;
-wire \bits16[5]~input_o ;
-wire \bits16[6]~input_o ;
-wire \bits16[7]~input_o ;
-wire \bits16[8]~input_o ;
-wire \bits16[9]~input_o ;
-wire \bits16[10]~input_o ;
-wire \bits16[11]~input_o ;
-wire \bits16[12]~input_o ;
-wire \bits16[13]~input_o ;
-wire \bits16[14]~input_o ;
-wire \bits16[15]~input_o ;
+wire \bits17[0]~input_o ;
+wire \bits17[1]~input_o ;
+wire \bits17[2]~input_o ;
+wire \bits17[3]~input_o ;
+wire \bits17[4]~input_o ;
+wire \bits17[5]~input_o ;
+wire \bits17[6]~input_o ;
+wire \bits17[7]~input_o ;
+wire \bits17[8]~input_o ;
+wire \bits17[9]~input_o ;
+wire \bits17[10]~input_o ;
+wire \bits17[11]~input_o ;
+wire \bits17[12]~input_o ;
+wire \bits17[13]~input_o ;
+wire \bits17[14]~input_o ;
+wire \bits17[15]~input_o ;
+wire \bits17[16]~input_o ;
 
 
 cycloneive_io_obuf \bits32[0]~output (
-	.i(\bits16[0]~input_o ),
+	.i(\bits17[0]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -109,7 +110,7 @@ defparam \bits32[0]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[1]~output (
-	.i(\bits16[1]~input_o ),
+	.i(\bits17[1]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -121,7 +122,7 @@ defparam \bits32[1]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[2]~output (
-	.i(\bits16[2]~input_o ),
+	.i(\bits17[2]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -133,7 +134,7 @@ defparam \bits32[2]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[3]~output (
-	.i(\bits16[3]~input_o ),
+	.i(\bits17[3]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -145,7 +146,7 @@ defparam \bits32[3]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[4]~output (
-	.i(\bits16[4]~input_o ),
+	.i(\bits17[4]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -157,7 +158,7 @@ defparam \bits32[4]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[5]~output (
-	.i(\bits16[5]~input_o ),
+	.i(\bits17[5]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -169,7 +170,7 @@ defparam \bits32[5]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[6]~output (
-	.i(\bits16[6]~input_o ),
+	.i(\bits17[6]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -181,7 +182,7 @@ defparam \bits32[6]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[7]~output (
-	.i(\bits16[7]~input_o ),
+	.i(\bits17[7]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -193,7 +194,7 @@ defparam \bits32[7]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[8]~output (
-	.i(\bits16[8]~input_o ),
+	.i(\bits17[8]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -205,7 +206,7 @@ defparam \bits32[8]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[9]~output (
-	.i(\bits16[9]~input_o ),
+	.i(\bits17[9]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -217,7 +218,7 @@ defparam \bits32[9]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[10]~output (
-	.i(\bits16[10]~input_o ),
+	.i(\bits17[10]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -229,7 +230,7 @@ defparam \bits32[10]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[11]~output (
-	.i(\bits16[11]~input_o ),
+	.i(\bits17[11]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -241,7 +242,7 @@ defparam \bits32[11]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[12]~output (
-	.i(\bits16[12]~input_o ),
+	.i(\bits17[12]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -253,7 +254,7 @@ defparam \bits32[12]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[13]~output (
-	.i(\bits16[13]~input_o ),
+	.i(\bits17[13]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -265,7 +266,7 @@ defparam \bits32[13]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[14]~output (
-	.i(\bits16[14]~input_o ),
+	.i(\bits17[14]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -277,7 +278,7 @@ defparam \bits32[14]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[15]~output (
-	.i(\bits16[15]~input_o ),
+	.i(\bits17[15]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -289,7 +290,7 @@ defparam \bits32[15]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[16]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -301,7 +302,7 @@ defparam \bits32[16]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[17]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -313,7 +314,7 @@ defparam \bits32[17]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[18]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -325,7 +326,7 @@ defparam \bits32[18]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[19]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -337,7 +338,7 @@ defparam \bits32[19]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[20]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -349,7 +350,7 @@ defparam \bits32[20]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[21]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -361,7 +362,7 @@ defparam \bits32[21]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[22]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -373,7 +374,7 @@ defparam \bits32[22]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[23]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -385,7 +386,7 @@ defparam \bits32[23]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[24]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -397,7 +398,7 @@ defparam \bits32[24]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[25]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -409,7 +410,7 @@ defparam \bits32[25]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[26]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -421,7 +422,7 @@ defparam \bits32[26]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[27]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -433,7 +434,7 @@ defparam \bits32[27]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[28]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -445,7 +446,7 @@ defparam \bits32[28]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[29]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -457,7 +458,7 @@ defparam \bits32[29]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[30]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -469,7 +470,7 @@ defparam \bits32[30]~output .open_drain_output = "false";
 // synopsys translate_on
 
 cycloneive_io_obuf \bits32[31]~output (
-	.i(gnd),
+	.i(\bits17[16]~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -480,148 +481,157 @@ defparam \bits32[31]~output .bus_hold = "false";
 defparam \bits32[31]~output .open_drain_output = "false";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[0]~input (
-	.i(bits16[0]),
+cycloneive_io_ibuf \bits17[0]~input (
+	.i(bits17[0]),
 	.ibar(gnd),
-	.o(\bits16[0]~input_o ));
+	.o(\bits17[0]~input_o ));
 // synopsys translate_off
-defparam \bits16[0]~input .bus_hold = "false";
-defparam \bits16[0]~input .simulate_z_as = "z";
+defparam \bits17[0]~input .bus_hold = "false";
+defparam \bits17[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[1]~input (
-	.i(bits16[1]),
+cycloneive_io_ibuf \bits17[1]~input (
+	.i(bits17[1]),
 	.ibar(gnd),
-	.o(\bits16[1]~input_o ));
+	.o(\bits17[1]~input_o ));
 // synopsys translate_off
-defparam \bits16[1]~input .bus_hold = "false";
-defparam \bits16[1]~input .simulate_z_as = "z";
+defparam \bits17[1]~input .bus_hold = "false";
+defparam \bits17[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[2]~input (
-	.i(bits16[2]),
+cycloneive_io_ibuf \bits17[2]~input (
+	.i(bits17[2]),
 	.ibar(gnd),
-	.o(\bits16[2]~input_o ));
+	.o(\bits17[2]~input_o ));
 // synopsys translate_off
-defparam \bits16[2]~input .bus_hold = "false";
-defparam \bits16[2]~input .simulate_z_as = "z";
+defparam \bits17[2]~input .bus_hold = "false";
+defparam \bits17[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[3]~input (
-	.i(bits16[3]),
+cycloneive_io_ibuf \bits17[3]~input (
+	.i(bits17[3]),
 	.ibar(gnd),
-	.o(\bits16[3]~input_o ));
+	.o(\bits17[3]~input_o ));
 // synopsys translate_off
-defparam \bits16[3]~input .bus_hold = "false";
-defparam \bits16[3]~input .simulate_z_as = "z";
+defparam \bits17[3]~input .bus_hold = "false";
+defparam \bits17[3]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[4]~input (
-	.i(bits16[4]),
+cycloneive_io_ibuf \bits17[4]~input (
+	.i(bits17[4]),
 	.ibar(gnd),
-	.o(\bits16[4]~input_o ));
+	.o(\bits17[4]~input_o ));
 // synopsys translate_off
-defparam \bits16[4]~input .bus_hold = "false";
-defparam \bits16[4]~input .simulate_z_as = "z";
+defparam \bits17[4]~input .bus_hold = "false";
+defparam \bits17[4]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[5]~input (
-	.i(bits16[5]),
+cycloneive_io_ibuf \bits17[5]~input (
+	.i(bits17[5]),
 	.ibar(gnd),
-	.o(\bits16[5]~input_o ));
+	.o(\bits17[5]~input_o ));
 // synopsys translate_off
-defparam \bits16[5]~input .bus_hold = "false";
-defparam \bits16[5]~input .simulate_z_as = "z";
+defparam \bits17[5]~input .bus_hold = "false";
+defparam \bits17[5]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[6]~input (
-	.i(bits16[6]),
+cycloneive_io_ibuf \bits17[6]~input (
+	.i(bits17[6]),
 	.ibar(gnd),
-	.o(\bits16[6]~input_o ));
+	.o(\bits17[6]~input_o ));
 // synopsys translate_off
-defparam \bits16[6]~input .bus_hold = "false";
-defparam \bits16[6]~input .simulate_z_as = "z";
+defparam \bits17[6]~input .bus_hold = "false";
+defparam \bits17[6]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[7]~input (
-	.i(bits16[7]),
+cycloneive_io_ibuf \bits17[7]~input (
+	.i(bits17[7]),
 	.ibar(gnd),
-	.o(\bits16[7]~input_o ));
+	.o(\bits17[7]~input_o ));
 // synopsys translate_off
-defparam \bits16[7]~input .bus_hold = "false";
-defparam \bits16[7]~input .simulate_z_as = "z";
+defparam \bits17[7]~input .bus_hold = "false";
+defparam \bits17[7]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[8]~input (
-	.i(bits16[8]),
+cycloneive_io_ibuf \bits17[8]~input (
+	.i(bits17[8]),
 	.ibar(gnd),
-	.o(\bits16[8]~input_o ));
+	.o(\bits17[8]~input_o ));
 // synopsys translate_off
-defparam \bits16[8]~input .bus_hold = "false";
-defparam \bits16[8]~input .simulate_z_as = "z";
+defparam \bits17[8]~input .bus_hold = "false";
+defparam \bits17[8]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[9]~input (
-	.i(bits16[9]),
+cycloneive_io_ibuf \bits17[9]~input (
+	.i(bits17[9]),
 	.ibar(gnd),
-	.o(\bits16[9]~input_o ));
+	.o(\bits17[9]~input_o ));
 // synopsys translate_off
-defparam \bits16[9]~input .bus_hold = "false";
-defparam \bits16[9]~input .simulate_z_as = "z";
+defparam \bits17[9]~input .bus_hold = "false";
+defparam \bits17[9]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[10]~input (
-	.i(bits16[10]),
+cycloneive_io_ibuf \bits17[10]~input (
+	.i(bits17[10]),
 	.ibar(gnd),
-	.o(\bits16[10]~input_o ));
+	.o(\bits17[10]~input_o ));
 // synopsys translate_off
-defparam \bits16[10]~input .bus_hold = "false";
-defparam \bits16[10]~input .simulate_z_as = "z";
+defparam \bits17[10]~input .bus_hold = "false";
+defparam \bits17[10]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[11]~input (
-	.i(bits16[11]),
+cycloneive_io_ibuf \bits17[11]~input (
+	.i(bits17[11]),
 	.ibar(gnd),
-	.o(\bits16[11]~input_o ));
+	.o(\bits17[11]~input_o ));
 // synopsys translate_off
-defparam \bits16[11]~input .bus_hold = "false";
-defparam \bits16[11]~input .simulate_z_as = "z";
+defparam \bits17[11]~input .bus_hold = "false";
+defparam \bits17[11]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[12]~input (
-	.i(bits16[12]),
+cycloneive_io_ibuf \bits17[12]~input (
+	.i(bits17[12]),
 	.ibar(gnd),
-	.o(\bits16[12]~input_o ));
+	.o(\bits17[12]~input_o ));
 // synopsys translate_off
-defparam \bits16[12]~input .bus_hold = "false";
-defparam \bits16[12]~input .simulate_z_as = "z";
+defparam \bits17[12]~input .bus_hold = "false";
+defparam \bits17[12]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[13]~input (
-	.i(bits16[13]),
+cycloneive_io_ibuf \bits17[13]~input (
+	.i(bits17[13]),
 	.ibar(gnd),
-	.o(\bits16[13]~input_o ));
+	.o(\bits17[13]~input_o ));
 // synopsys translate_off
-defparam \bits16[13]~input .bus_hold = "false";
-defparam \bits16[13]~input .simulate_z_as = "z";
+defparam \bits17[13]~input .bus_hold = "false";
+defparam \bits17[13]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[14]~input (
-	.i(bits16[14]),
+cycloneive_io_ibuf \bits17[14]~input (
+	.i(bits17[14]),
 	.ibar(gnd),
-	.o(\bits16[14]~input_o ));
+	.o(\bits17[14]~input_o ));
 // synopsys translate_off
-defparam \bits16[14]~input .bus_hold = "false";
-defparam \bits16[14]~input .simulate_z_as = "z";
+defparam \bits17[14]~input .bus_hold = "false";
+defparam \bits17[14]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cycloneive_io_ibuf \bits16[15]~input (
-	.i(bits16[15]),
+cycloneive_io_ibuf \bits17[15]~input (
+	.i(bits17[15]),
 	.ibar(gnd),
-	.o(\bits16[15]~input_o ));
+	.o(\bits17[15]~input_o ));
 // synopsys translate_off
-defparam \bits16[15]~input .bus_hold = "false";
-defparam \bits16[15]~input .simulate_z_as = "z";
+defparam \bits17[15]~input .bus_hold = "false";
+defparam \bits17[15]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \bits17[16]~input (
+	.i(bits17[16]),
+	.ibar(gnd),
+	.o(\bits17[16]~input_o ));
+// synopsys translate_off
+defparam \bits17[16]~input .bus_hold = "false";
+defparam \bits17[16]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 assign bits32[0] = \bits32[0]~output_o ;

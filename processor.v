@@ -91,5 +91,65 @@ module processor(
     input [31:0] data_readRegA, data_readRegB;
 
     /* YOUR CODE STARTS HERE */
-    //lw 01000
+    //instruction
+	 wire [4:0] opcode,rd,rs,rt,shamt,ALUop;
+	 wire [16:0] Immediate;
+	 
+	 //signal
+	 wire Rwe,Rdst,ALUinB,DMwe,Rwd;
+	 
+	 //I-type
+	 wire [31:0] Immediate_full;
+	 wire [31:0] data_B;
+	 
+	 //Regfile
+	 wire [4:0] Reg_d;
+	 wire [31:0] Reg_datawrite;
+	 
+	 //alu
+	 wire isNotEqual, isLessThan, overflow;
+	 wire [31:0] ALU_result;
+	 
+	 
+	 //instruction
+	 assign opcode = q_imem[31:27];
+	 assign rd = q_imem[26:22];
+	 assign rs = q_imem[21:17];
+	 assign rt = q_imem[16:12];
+	 assign shamt = q_imem[11:7];
+	 assign ALUop = q_imem[6:2];
+	 assign Immediate = q_imem[16:0];
+	 
+	 
+	 //Regfile
+	 assign Reg_d = Rdst?rd:rt;
+	 
+    assign ctrl_writeEnable = Rwe;
+    assign ctrl_writeReg = Reg_d;
+	 assign ctrl_readRegA = rs;
+	 assign ctrl_readRegB = rt;
+    assign data_writeReg = Rwd?ALU_result:q_dmem;
+	 
+	 //I-type
+	 SX SX0(Immediate,Immediate_full);
+	 assign data_B = ALUinB?Immediate_full:data_readRegA;
+	 
+	 //alu
+	 alu alu0(
+			.data_operandA		 (data_readRegA), 
+			.data_operandB     (data_B), 
+			.ctrl_ALUopcode    (ALUop),
+			.ctrl_shiftamt     (shamt), 
+			.data_result       (ALU_result), 
+			.isNotEqual        (isNotEqual), 
+			.isLessThan        (isLessThan), 
+			.overflow          (overflow)
+	);
+	
+	//data mem
+	assign address_dmem = ALU_result[11:0];
+	assign data = data_readRegB;
+	
+	
+	 
 endmodule

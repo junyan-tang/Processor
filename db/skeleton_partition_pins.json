@@ -68,67 +68,135 @@
 					"strict" : false
 				},
 				{
-					"name" : "bits16[0]",
+					"name" : "bits32[16]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[1]",
+					"name" : "bits32[17]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[2]",
+					"name" : "bits32[18]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[3]",
+					"name" : "bits32[19]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[4]",
+					"name" : "bits32[20]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[5]",
+					"name" : "bits32[21]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[6]",
+					"name" : "bits32[22]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[7]",
+					"name" : "bits32[23]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[8]",
+					"name" : "bits32[24]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[9]",
+					"name" : "bits32[25]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[10]",
+					"name" : "bits32[26]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[11]",
+					"name" : "bits32[27]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[12]",
+					"name" : "bits32[28]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[13]",
+					"name" : "bits32[29]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[14]",
+					"name" : "bits32[30]",
 					"strict" : false
 				},
 				{
-					"name" : "bits16[15]",
+					"name" : "bits32[31]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[15]",
+					"strict" : false
+				},
+				{
+					"name" : "bits17[16]",
 					"strict" : false
 				}
 			]

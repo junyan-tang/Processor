@@ -3,7 +3,7 @@ $comment
 		vcd file skeleton.msim.vcd -direction
 $end
 $date
-	Thu Oct 12 21:45:45 2023
+	Sat Oct 14 23:13:12 2023
 $end
 $version
 	ModelSim Version 10.5b
@@ -13,7 +13,7 @@ $timescale
 $end
 
 $scope module SX_vlg_vec_tst $end
-$var reg 16 ! bits16 [15:0] $end
+$var reg 17 ! bits17 [16:0] $end
 $var wire 1 " bits32 [31] $end
 $var wire 1 # bits32 [30] $end
 $var wire 1 $ bits32 [29] $end
@@ -86,60 +86,61 @@ $var wire 1 d bits32[28]~output_o $end
 $var wire 1 e bits32[29]~output_o $end
 $var wire 1 f bits32[30]~output_o $end
 $var wire 1 g bits32[31]~output_o $end
-$var wire 1 h bits16[0]~input_o $end
-$var wire 1 i bits16[1]~input_o $end
-$var wire 1 j bits16[2]~input_o $end
-$var wire 1 k bits16[3]~input_o $end
-$var wire 1 l bits16[4]~input_o $end
-$var wire 1 m bits16[5]~input_o $end
-$var wire 1 n bits16[6]~input_o $end
-$var wire 1 o bits16[7]~input_o $end
-$var wire 1 p bits16[8]~input_o $end
-$var wire 1 q bits16[9]~input_o $end
-$var wire 1 r bits16[10]~input_o $end
-$var wire 1 s bits16[11]~input_o $end
-$var wire 1 t bits16[12]~input_o $end
-$var wire 1 u bits16[13]~input_o $end
-$var wire 1 v bits16[14]~input_o $end
-$var wire 1 w bits16[15]~input_o $end
+$var wire 1 h bits17[0]~input_o $end
+$var wire 1 i bits17[1]~input_o $end
+$var wire 1 j bits17[2]~input_o $end
+$var wire 1 k bits17[3]~input_o $end
+$var wire 1 l bits17[4]~input_o $end
+$var wire 1 m bits17[5]~input_o $end
+$var wire 1 n bits17[6]~input_o $end
+$var wire 1 o bits17[7]~input_o $end
+$var wire 1 p bits17[8]~input_o $end
+$var wire 1 q bits17[9]~input_o $end
+$var wire 1 r bits17[10]~input_o $end
+$var wire 1 s bits17[11]~input_o $end
+$var wire 1 t bits17[12]~input_o $end
+$var wire 1 u bits17[13]~input_o $end
+$var wire 1 v bits17[14]~input_o $end
+$var wire 1 w bits17[15]~input_o $end
+$var wire 1 x bits17[16]~input_o $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b11000101011001 !
+b10111011111110111 !
 1A
-0@
-0?
-1>
+1@
+1?
+0>
 1=
-0<
+1<
 1;
-0:
+1:
 19
-08
-07
+18
+17
 06
 15
 14
-03
+13
 02
-01
-00
-0/
-0.
-0-
-0,
-0+
-0*
-0)
-0(
-0'
-0&
-0%
-0$
-0#
-0"
+11
+10
+1/
+1.
+1-
+1,
+1+
+1*
+1)
+1(
+1'
+1&
+1%
+1$
+1#
+1"
 0B
 1C
 xD
@@ -147,21 +148,76 @@ xD
 1F
 1G
 1H
-0I
-0J
-1K
+1I
+1J
+0K
 1L
-0M
+1M
 1N
-0O
+1O
 1P
-0Q
-0R
+1Q
+1R
 0S
 1T
 1U
-0V
+1V
 0W
+1X
+1Y
+1Z
+1[
+1\
+1]
+1^
+1_
+1`
+1a
+1b
+1c
+1d
+1e
+1f
+1g
+1h
+1i
+1j
+0k
+1l
+1m
+1n
+1o
+1p
+1q
+1r
+0s
+1t
+1u
+1v
+0w
+1x
+$end
+#500000
+b111011111110111 !
+b1111011111110111 !
+b1111010111110111 !
+b1111010011110111 !
+b1111010001110111 !
+b1111010000110111 !
+b1111010000100111 !
+b1111010000101111 !
+b1111010000101011 !
+b1111010000101001 !
+0i
+0j
+1k
+0l
+0n
+0o
+0p
+0q
+1w
+0x
 0X
 0Y
 0Z
@@ -178,58 +234,38 @@ xD
 0e
 0f
 0g
-1h
-0i
-0j
-1k
-1l
-0m
-1n
-0o
-1p
-0q
-0r
-0s
-1t
-1u
-0v
-0w
-$end
-#500000
-b10000101011001 !
-b10100101011001 !
-b10101101011001 !
-b10101111011001 !
-b10101110011001 !
-b10101110001001 !
-b10101110000001 !
-b10101110000011 !
-b10101110000010 !
-0h
-1i
-0k
-0l
-0n
-1o
-1q
-1s
-0t
-0T
-1S
-1Q
-1O
+1W
+0Q
+0P
+0O
 0N
 0L
-0K
-1I
-0H
-0A
-1@
-0>
+1K
+0J
+0I
+0@
+0?
+1>
 0=
 0;
-1:
-18
-16
-05
+0:
+09
+08
+12
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+0/
+00
+01
 #1000000
