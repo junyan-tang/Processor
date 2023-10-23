@@ -1,5 +1,4 @@
-# Reading C:/modelsim/modelsim_ase/tcl/vsim/pref.tcl
-# ERROR: No extended dataflow license exists
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
 # do skeleton_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -8,134 +7,144 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
-# Copying C:/modelsim/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/dffe.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/dffe.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:10 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/dffe.v 
+# Start time: 16:25:48 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/dffe.v 
 # -- Compiling module dffe_ref
 # 
 # Top level modules:
 # 	dffe_ref
-# End time: 15:27:10 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:48 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/skeleton.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:10 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/skeleton.v 
+# Start time: 16:25:48 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v 
 # -- Compiling module skeleton
 # 
 # Top level modules:
 # 	skeleton
-# End time: 15:27:10 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:48 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/regfile.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/regfile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:10 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/regfile.v 
+# Start time: 16:25:48 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 15:27:10 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:48 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/processor.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/processor.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:10 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/processor.v 
+# Start time: 16:25:48 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/processor.v 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 15:27:10 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:48 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/imem.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/dmem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:11 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/imem.v 
-# -- Compiling module imem
-# 
-# Top level modules:
-# 	imem
-# End time: 15:27:11 on Oct 23,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/dmem.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:11 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/dmem.v 
+# Start time: 16:25:48 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/dmem.v 
 # -- Compiling module dmem
 # 
 # Top level modules:
 # 	dmem
-# End time: 15:27:11 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:48 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/alu.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/alu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:11 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/alu.v 
+# Start time: 16:25:48 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 15:27:11 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:48 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/SX.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/SX.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:12 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/SX.v 
+# Start time: 16:25:48 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/SX.v 
 # -- Compiling module SX
 # 
 # Top level modules:
 # 	SX
-# End time: 15:27:12 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:48 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/reg_12bit.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/Control.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:12 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/reg_12bit.v 
+# Start time: 16:25:48 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/Control.v 
+# -- Compiling module Control
+# 
+# Top level modules:
+# 	Control
+# End time: 16:25:48 on Oct 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:25:49 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v 
 # -- Compiling module reg_12bit
 # 
 # Top level modules:
 # 	reg_12bit
-# End time: 15:27:12 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:49 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/clock_divider_by2.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/clock_divider_by2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:12 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/clock_divider_by2.v 
+# Start time: 16:25:49 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/clock_divider_by2.v 
 # -- Compiling module clock_divider_by2
 # 
 # Top level modules:
 # 	clock_divider_by2
-# End time: 15:27:12 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:49 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/plus1.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/plus1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:12 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/plus1.v 
+# Start time: 16:25:49 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/plus1.v 
 # -- Compiling module plus1
 # 
 # Top level modules:
 # 	plus1
-# End time: 15:27:12 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:49 on Oct 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/imem.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:25:49 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/imem.v 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 16:25:49 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/ECE550/Processor {C:/ECE550/Processor/skeleton_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:27:13 on Oct 23,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE550/Processor" C:/ECE550/Processor/skeleton_tb.v 
+# Start time: 16:25:49 on Oct 23,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v 
 # -- Compiling module skeleton_tb
 # 
 # Top level modules:
 # 	skeleton_tb
-# End time: 15:27:13 on Oct 23,2023, Elapsed time: 0:00:00
+# End time: 16:25:49 on Oct 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  skeleton_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" skeleton_tb 
-# Start time: 15:27:13 on Oct 23,2023
+# Start time: 16:25:49 on Oct 23,2023
 # Loading work.skeleton_tb
 # Loading work.skeleton
 # Loading work.clock_divider_by2
@@ -147,13 +156,18 @@
 # Loading work.plus1
 # Loading work.alu
 # Loading work.reg_12bit
+# Loading work.Control
 # Loading work.SX
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # Loading work.dffe_ref
-# ** Warning: (vsim-3015) C:/ECE550/Processor/processor.v(116): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/ECE550/Processor/reg_12bit.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /skeleton_tb/skeleton0/my_processor/PC File: C:/ECE550/Processor/reg_12bit.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/17.0/checkpoint4/processor.v(116): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /skeleton_tb/skeleton0/my_processor/PC File: C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/17.0/checkpoint4/processor.v(129): [PCDPC] - Port size (5) does not match connection size (1) for port 'ALUop'. The port definition is at: C:/intelFPGA_lite/17.0/checkpoint4/Control.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /skeleton_tb/skeleton0/my_processor/control0 File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/17.0/checkpoint4/processor.v(145): [PCDPC] - Port size (5) does not match connection size (1) for port 'ctrl_ALUopcode'. The port definition is at: C:/intelFPGA_lite/17.0/checkpoint4/alu.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /skeleton_tb/skeleton0/my_processor/alu0 File: C:/intelFPGA_lite/17.0/checkpoint4/alu.v
 # 
 # add wave *
 # view structure
@@ -161,16 +175,11 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../reference_CPU/mif_outputs/basic_test.mif" for reading.
-# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v(264)
-#    Time: 0 ps  Iteration: 0  Instance: /skeleton_tb/skeleton0/my_imem/altsyncram_component/m_default/altsyncram_inst
-# ERROR: cannot read ../reference_CPU/mif_outputs/basic_test.mif.
-# ** Warning: (vsim-7) Failed to open readmem file "../reference_CPU/mif_outputs/basic_test.ver" in read mode.
-# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v(48977)
-#    Time: 0 ps  Iteration: 0  Instance: /skeleton_tb/skeleton0/my_imem/altsyncram_component/m_default/altsyncram_inst
 #                    0<< Starting the Simulation >>
-# ** Note: $stop    : C:/ECE550/Processor/skeleton_tb.v(27)
-#    Time: 20 ns  Iteration: 0  Instance: /skeleton_tb
-# Break in Module skeleton_tb at C:/ECE550/Processor/skeleton_tb.v line 27
-# End time: 15:29:04 on Oct 23,2023, Elapsed time: 0:01:51
-# Errors: 0, Warnings: 3
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v(28)
+#    Time: 420 ns  Iteration: 0  Instance: /skeleton_tb
+# Break in Module skeleton_tb at C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v line 28
+# Error opening C:/intelFPGA_lite/17.0/checkpoint4/simulation/modelsim/[PCDPC] - Port size (1) does not match connection size 
+# Path name 'C:/intelFPGA_lite/17.0/checkpoint4/simulation/modelsim/[PCDPC] - Port size (1) does not match connection size ' doesn't exist.
+# End time: 16:26:55 on Oct 23,2023, Elapsed time: 0:01:06
+# Errors: 1, Warnings: 3

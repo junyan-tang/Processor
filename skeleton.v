@@ -21,6 +21,7 @@ module skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_c
     output imem_clock, dmem_clock, processor_clock, regfile_clock;
 	 /** CLOCK **/
 	 wire clock_divided2;
+	 assign processor_clock = clock;
 	 clock_divider_by2 clk_base(clock, reset, clock_divided2);
 	 
 	 clock_divider_by2 imem(clock_divided2, reset, imem_clock);

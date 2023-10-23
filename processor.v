@@ -92,7 +92,7 @@ module processor(
 
     /* YOUR CODE STARTS HERE */
     //instruction
-	 wire [4:0] opcode,rd,rs,rt,shamt,ALUop;
+	 wire [4:0] opcode,rd,rs,rt,shamt,Func;
 	 wire [16:0] Immediate;
 	 
 	 //signal
@@ -115,15 +115,18 @@ module processor(
 	 plus1 plus1_0(address_imem,PCplus4);
 	 reg_12bit PC(address_imem,PCplus4,clock,1,reset);
 	 
+	 
+	 
 	 //instruction
 	 assign opcode = q_imem[31:27];
 	 assign rd = q_imem[26:22];
 	 assign rs = q_imem[21:17];
 	 assign rt = q_imem[16:12];
 	 assign shamt = q_imem[11:7];
-	 assign ALUop = q_imem[6:2];
+	 assign Func = q_imem[6:2];
 	 assign Immediate = q_imem[16:0];
 	 
+	 Control control0(opcode,Func,Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd);
 	 
 	 //Regfile
 	 assign Reg_t = Rdst?rd:rt;

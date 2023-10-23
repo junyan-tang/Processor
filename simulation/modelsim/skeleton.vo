@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
-// DATE "10/23/2023 15:24:39"
+// DATE "10/23/2023 16:25:37"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -44,12 +44,12 @@ output 	processor_clock;
 output 	regfile_clock;
 
 // Design Ports Information
-// imem_clock	=>  Location: PIN_D4,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// dmem_clock	=>  Location: PIN_E4,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// processor_clock	=>  Location: PIN_J6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// regfile_clock	=>  Location: PIN_E5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// reset	=>  Location: PIN_H7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// clock	=>  Location: PIN_C2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// imem_clock	=>  Location: PIN_M1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// dmem_clock	=>  Location: PIN_L1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// processor_clock	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// regfile_clock	=>  Location: PIN_L2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clock	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_M2,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -85,7 +85,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: IOOBUF_X1_Y73_N2
+// Location: IOOBUF_X0_Y44_N23
 cycloneive_io_obuf \imem_clock~output (
 	.i(\dmem|out_clk~q ),
 	.oe(vcc),
@@ -98,7 +98,7 @@ defparam \imem_clock~output .bus_hold = "false";
 defparam \imem_clock~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X1_Y73_N9
+// Location: IOOBUF_X0_Y44_N9
 cycloneive_io_obuf \dmem_clock~output (
 	.i(\dmem|out_clk~q ),
 	.oe(vcc),
@@ -111,9 +111,9 @@ defparam \dmem_clock~output .bus_hold = "false";
 defparam \dmem_clock~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X0_Y50_N16
+// Location: IOOBUF_X0_Y45_N23
 cycloneive_io_obuf \processor_clock~output (
-	.i(gnd),
+	.i(\clock~input_o ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -124,7 +124,7 @@ defparam \processor_clock~output .bus_hold = "false";
 defparam \processor_clock~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X1_Y73_N16
+// Location: IOOBUF_X0_Y44_N2
 cycloneive_io_obuf \regfile_clock~output (
 	.i(\dmem|out_clk~q ),
 	.oe(vcc),
@@ -137,7 +137,7 @@ defparam \regfile_clock~output .bus_hold = "false";
 defparam \regfile_clock~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y69_N8
+// Location: IOIBUF_X0_Y45_N15
 cycloneive_io_ibuf \clock~input (
 	.i(clock),
 	.ibar(gnd),
@@ -147,7 +147,7 @@ defparam \clock~input .bus_hold = "false";
 defparam \clock~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y68_N15
+// Location: IOIBUF_X0_Y44_N15
 cycloneive_io_ibuf \reset~input (
 	.i(reset),
 	.ibar(gnd),
@@ -157,7 +157,7 @@ defparam \reset~input .bus_hold = "false";
 defparam \reset~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X1_Y69_N0
+// Location: LCCOMB_X1_Y45_N14
 cycloneive_lcell_comb \clk_base|out_clk~0 (
 // Equation(s):
 // \clk_base|out_clk~0_combout  = (!\clk_base|out_clk~q  & !\reset~input_o )
@@ -174,24 +174,24 @@ defparam \clk_base|out_clk~0 .lut_mask = 16'h0033;
 defparam \clk_base|out_clk~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X1_Y69_N30
+// Location: LCCOMB_X1_Y45_N16
 cycloneive_lcell_comb \clk_base|out_clk~feeder (
 // Equation(s):
 // \clk_base|out_clk~feeder_combout  = \clk_base|out_clk~0_combout 
 
-	.dataa(\clk_base|out_clk~0_combout ),
-	.datab(gnd),
+	.dataa(gnd),
+	.datab(\clk_base|out_clk~0_combout ),
 	.datac(gnd),
 	.datad(gnd),
 	.cin(gnd),
 	.combout(\clk_base|out_clk~feeder_combout ),
 	.cout());
 // synopsys translate_off
-defparam \clk_base|out_clk~feeder .lut_mask = 16'hAAAA;
+defparam \clk_base|out_clk~feeder .lut_mask = 16'hCCCC;
 defparam \clk_base|out_clk~feeder .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X1_Y69_N31
+// Location: FF_X1_Y45_N17
 dffeas \clk_base|out_clk (
 	.clk(\clock~input_o ),
 	.d(\clk_base|out_clk~feeder_combout ),
@@ -210,7 +210,7 @@ defparam \clk_base|out_clk .is_wysiwyg = "true";
 defparam \clk_base|out_clk .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X1_Y69_N4
+// Location: LCCOMB_X1_Y45_N30
 cycloneive_lcell_comb \dmem|out_clk~0 (
 // Equation(s):
 // \dmem|out_clk~0_combout  = (!\dmem|out_clk~q  & !\reset~input_o )
@@ -227,7 +227,7 @@ defparam \dmem|out_clk~0 .lut_mask = 16'h000F;
 defparam \dmem|out_clk~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X1_Y69_N5
+// Location: FF_X1_Y45_N31
 dffeas \dmem|out_clk (
 	.clk(\clk_base|out_clk~q ),
 	.d(\dmem|out_clk~0_combout ),

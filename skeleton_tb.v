@@ -24,6 +24,7 @@ module skeleton_tb();
 		reset = 1'b1;
 		#20
 		reset = 1'b0;
+		#400
 		$stop;
 	end
 

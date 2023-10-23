@@ -12,15 +12,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "processor_clock",
+					"strict" : false
+				},
+				{
 					"name" : "regfile_clock",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "clock",
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "reset",
 					"strict" : false
 				}
 			]

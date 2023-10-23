@@ -1,2 +1,2 @@
-Warning (10273): Verilog HDL warning at regfile.v(27): extended using "x" or "z" File: C:/ECE550/Processor/regfile.v Line: 27
-Warning (10273): Verilog HDL warning at regfile.v(28): extended using "x" or "z" File: C:/ECE550/Processor/regfile.v Line: 28
+Warning (10273): Verilog HDL warning at regfile.v(27): extended using "x" or "z" File: C:/intelFPGA_lite/17.0/checkpoint4/regfile.v Line: 27
+Warning (10273): Verilog HDL warning at regfile.v(28): extended using "x" or "z" File: C:/intelFPGA_lite/17.0/checkpoint4/regfile.v Line: 28
