@@ -1,0 +1,275 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/ECE550/Processor/simulation/modelsim
+valu
+Z1 !s110 1698089231
+!i10b 1
+!s100 CM2POFHhm`MRQRPIcjMQG0
+IGn?1A`m9FRCBYmN]aYVTb1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1697157964
+8C:/ECE550/Processor/alu.v
+FC:/ECE550/Processor/alu.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1698089231.000000
+!s107 C:/ECE550/Processor/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/alu.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/ECE550/Processor
+Z7 tCvgOpt 0
+vclock_divider_by2
+Z8 !s110 1698089232
+!i10b 1
+!s100 jOLa2bKP^f2Tj;AhQWhFN1
+IbA:]cOL8:Y2aSe]0fj:hJ1
+R2
+R0
+w1698085492
+8C:/ECE550/Processor/clock_divider_by2.v
+FC:/ECE550/Processor/clock_divider_by2.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1698089232.000000
+!s107 C:/ECE550/Processor/clock_divider_by2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/clock_divider_by2.v|
+!i113 1
+R5
+R6
+R7
+vdffe_ref
+Z10 !s110 1698089230
+!i10b 1
+!s100 m2?1a8:`omUTO_3UK>MQz1
+IOk97Dk;lJ[daF[lhh]M3>0
+R2
+R0
+Z11 w1698077170
+8C:/ECE550/Processor/dffe.v
+FC:/ECE550/Processor/dffe.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z12 !s108 1698089230.000000
+!s107 C:/ECE550/Processor/dffe.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/dffe.v|
+!i113 1
+R5
+R6
+R7
+vdmem
+R1
+!i10b 1
+!s100 Ig2U5z`UQ`aKkLjgP8hjc1
+ITShAOaj7U;^jV@;1G>VVQ3
+R2
+R0
+w1698082183
+8C:/ECE550/Processor/dmem.v
+FC:/ECE550/Processor/dmem.v
+Z13 L0 40
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/ECE550/Processor/dmem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/dmem.v|
+!i113 1
+R5
+R6
+R7
+vimem
+R1
+!i10b 1
+!s100 WB=J9POl]=^LaSgH1bk;S0
+IH2BGRXief^dcHj6;F@;FF1
+R2
+R0
+w1698082034
+8C:/ECE550/Processor/imem.v
+FC:/ECE550/Processor/imem.v
+R13
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/ECE550/Processor/imem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/imem.v|
+!i113 1
+R5
+R6
+R7
+vplus1
+R8
+!i10b 1
+!s100 ;RLamBmBkm5jZi;71?KBU1
+I^2zaW=EmG5gF^AMlBLzNh3
+R2
+R0
+w1698088783
+8C:/ECE550/Processor/plus1.v
+FC:/ECE550/Processor/plus1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/ECE550/Processor/plus1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/plus1.v|
+!i113 1
+R5
+R6
+R7
+vprocessor
+R10
+!i10b 1
+!s100 aVaKM;gM]`UcFAGViXB1H1
+I3WYSgCW1[=jL];B<Cz7H83
+R2
+R0
+w1698082473
+8C:/ECE550/Processor/processor.v
+FC:/ECE550/Processor/processor.v
+L0 50
+R3
+r1
+!s85 0
+31
+R12
+!s107 C:/ECE550/Processor/processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/processor.v|
+!i113 1
+R5
+R6
+R7
+vreg_12bit
+R8
+!i10b 1
+!s100 ?2?hJ<MkeR3F[fTh<HndY0
+I`mn83D6_fmg0[YhR4zJgl0
+R2
+R0
+R11
+8C:/ECE550/Processor/reg_12bit.v
+FC:/ECE550/Processor/reg_12bit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/ECE550/Processor/reg_12bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/reg_12bit.v|
+!i113 1
+R5
+R6
+R7
+vregfile
+R10
+!i10b 1
+!s100 mMed6O1S[Q`LYLGGa2PW63
+I8XAfa1ZBD??N>cmLTYJ4?1
+R2
+R0
+w1698088630
+8C:/ECE550/Processor/regfile.v
+FC:/ECE550/Processor/regfile.v
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+!s107 C:/ECE550/Processor/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/regfile.v|
+!i113 1
+R5
+R6
+R7
+vskeleton
+R10
+!i10b 1
+!s100 :DdGNSIfj_bhB1nc?S?nZ0
+IOF08m1E`Jj:GRLm^b>oXD2
+R2
+R0
+w1698083213
+8C:/ECE550/Processor/skeleton.v
+FC:/ECE550/Processor/skeleton.v
+L0 12
+R3
+r1
+!s85 0
+31
+R12
+!s107 C:/ECE550/Processor/skeleton.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/skeleton.v|
+!i113 1
+R5
+R6
+R7
+vskeleton_tb
+!s110 1698089233
+!i10b 1
+!s100 BJ8^^<hz:CL1QdR_Ymh=G1
+IYCo?<`Dk7A9I8E=66FQ`D3
+R2
+R0
+w1698087779
+8C:/ECE550/Processor/skeleton_tb.v
+FC:/ECE550/Processor/skeleton_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1698089233.000000
+!s107 C:/ECE550/Processor/skeleton_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/skeleton_tb.v|
+!i113 1
+R5
+R6
+R7
+vSX
+R8
+!i10b 1
+!s100 ZXD`=JJ170lIGZc6ni3Mg0
+I5_>fAUBPm6Ld`G[N<fF871
+R2
+R0
+w1697722106
+8C:/ECE550/Processor/SX.v
+FC:/ECE550/Processor/SX.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/ECE550/Processor/SX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/SX.v|
+!i113 1
+R5
+R6
+R7
+n@s@x
