@@ -112,7 +112,7 @@ module processor(
 	 
 	 //PC
 	 wire [11:0] PCplus4;
-	 plus4 plus4_0(address_imem,PCplus4);
+	 plus1 plus1_0(address_imem,PCplus4);
 	 reg_12bit PC(address_imem,PCplus4,clock,1,reset);
 	 
 	 //instruction
