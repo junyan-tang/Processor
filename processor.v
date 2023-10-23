@@ -110,6 +110,10 @@ module processor(
 	 wire isNotEqual, isLessThan, overflow;
 	 wire [31:0] ALU_result;
 	 
+	 //PC
+	 wire [11:0] PCplus4;
+	 plus4 plus4_0(address_imem,PCplus4);
+	 reg_12bit PC(address_imem,PCplus4,clock,1,reset);
 	 
 	 //instruction
 	 assign opcode = q_imem[31:27];
