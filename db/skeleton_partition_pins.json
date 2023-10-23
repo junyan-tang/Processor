@@ -4,199 +4,99 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "bits32[0]",
+					"name" : "out12[0]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[1]",
+					"name" : "out12[1]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[2]",
+					"name" : "out12[2]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[3]",
+					"name" : "out12[3]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[4]",
+					"name" : "out12[4]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[5]",
+					"name" : "out12[5]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[6]",
+					"name" : "out12[6]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[7]",
+					"name" : "out12[7]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[8]",
+					"name" : "out12[8]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[9]",
+					"name" : "out12[9]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[10]",
+					"name" : "out12[10]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[11]",
+					"name" : "out12[11]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[12]",
+					"name" : "in12[0]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[13]",
+					"name" : "in12[1]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[14]",
+					"name" : "in12[2]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[15]",
+					"name" : "in12[3]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[16]",
+					"name" : "in12[4]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[17]",
+					"name" : "in12[5]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[18]",
+					"name" : "in12[6]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[19]",
+					"name" : "in12[7]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[20]",
+					"name" : "in12[8]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[21]",
+					"name" : "in12[9]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[22]",
+					"name" : "in12[10]",
 					"strict" : false
 				},
 				{
-					"name" : "bits32[23]",
-					"strict" : false
-				},
-				{
-					"name" : "bits32[24]",
-					"strict" : false
-				},
-				{
-					"name" : "bits32[25]",
-					"strict" : false
-				},
-				{
-					"name" : "bits32[26]",
-					"strict" : false
-				},
-				{
-					"name" : "bits32[27]",
-					"strict" : false
-				},
-				{
-					"name" : "bits32[28]",
-					"strict" : false
-				},
-				{
-					"name" : "bits32[29]",
-					"strict" : false
-				},
-				{
-					"name" : "bits32[30]",
-					"strict" : false
-				},
-				{
-					"name" : "bits32[31]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[0]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[1]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[2]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[3]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[4]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[5]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[6]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[7]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[8]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[9]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[10]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[11]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[12]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[13]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[14]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[15]",
-					"strict" : false
-				},
-				{
-					"name" : "bits17[16]",
+					"name" : "in12[11]",
 					"strict" : false
 				}
 			]

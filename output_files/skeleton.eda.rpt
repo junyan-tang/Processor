@@ -1,5 +1,5 @@
 EDA Netlist Writer report for skeleton
-Sat Oct 14 23:13:11 2023
+Sun Oct 22 21:23:04 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Oct 14 23:13:11 2023 ;
+; EDA Netlist Writer Status ; Successful - Sun Oct 22 21:23:04 2023 ;
 ; Revision Name             ; skeleton                              ;
-; Top-level Entity Name     ; SX                                    ;
+; Top-level Entity Name     ; plus4                                 ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -95,15 +95,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Sat Oct 14 23:13:10 2023
+    Info: Processing started: Sun Oct 22 21:23:04 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/17.0/checkpoint4/simulation/qsim/ skeleton -c skeleton
 Info (119006): Selected device EP4CE115F29C7 for design "skeleton"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file skeleton.vo in folder "C:/intelFPGA_lite/17.0/checkpoint4/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4642 megabytes
-    Info: Processing ended: Sat Oct 14 23:13:11 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4644 megabytes
+    Info: Processing ended: Sun Oct 22 21:23:04 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

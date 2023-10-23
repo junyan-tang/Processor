@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Sat Oct 14 23:59:17 2023
+Sun Oct 22 21:22:32 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -10,8 +10,15 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "alu:comb_35"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -38,20 +45,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sat Oct 14 23:59:17 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 22 21:22:32 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
-; Top-level Entity Name              ; skeleton                                    ;
+; Top-level Entity Name              ; plus4                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 9                                           ;
+;     Total combinational functions  ; 9                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 24                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -61,7 +68,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; skeleton           ; skeleton           ;
+; Top-level entity name                                                      ; plus4              ; skeleton           ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,56 +164,165 @@ agreement for further details.
 +----------------------------+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path               ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
+; alu.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/17.0/checkpoint4/alu.v   ;         ;
+; plus4.v                          ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/17.0/checkpoint4/plus4.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
+
+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimated Total logic elements              ; 9                  ;
+;                                             ;                    ;
+; Total combinational functions               ; 9                  ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 0                  ;
+;     -- 3 input functions                    ; 1                  ;
+;     -- <=2 input functions                  ; 8                  ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 1                  ;
+;     -- arithmetic mode                      ; 8                  ;
+;                                             ;                    ;
+; Total registers                             ; 0                  ;
+;     -- Dedicated logic registers            ; 0                  ;
+;     -- I/O registers                        ; 0                  ;
+;                                             ;                    ;
+; I/O pins                                    ; 24                 ;
+;                                             ;                    ;
+; Embedded Multiplier 9-bit elements          ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; alu:comb_35|Add0~0 ;
+; Maximum fan-out                             ; 2                  ;
+; Total fan-out                               ; 54                 ;
+; Average fan-out                             ; 0.95               ;
++---------------------------------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |plus4                     ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |plus4              ; plus4       ; work         ;
+;    |alu:comb_35|           ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |plus4|alu:comb_35  ; alu         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:comb_35"                                                                                         ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; data_operandA[31..12] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_operandB[31..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_operandB[1..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_operandB[2]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; ctrl_ALUopcode        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ctrl_shiftamt         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data_result[31..12]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; isNotEqual            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; isLessThan            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 24                          ;
+; cycloneiii_lcell_comb ; 10                          ;
+;     arith             ; 8                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 2                           ;
+;         1 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 1.80                        ;
+; Average LUT depth     ; 1.41                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Oct 14 23:59:09 2023
+    Info: Processing started: Sun Oct 22 21:22:23 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file fa.v
+    Info (12023): Found entity 1: FA File: C:/intelFPGA_lite/17.0/checkpoint4/FA.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file skeleton.v
     Info (12023): Found entity 1: skeleton File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
     Info (12023): Found entity 1: regfile File: C:/intelFPGA_lite/17.0/checkpoint4/regfile.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor.v
     Info (12023): Found entity 1: processor File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 50
-Info (12021): Found 0 design units, including 0 entities, in source file imem.v
-Info (12021): Found 0 design units, including 0 entities, in source file dmem.v
+Info (12021): Found 1 design units, including 1 entities, in source file imem.v
+    Info (12023): Found entity 1: imem File: C:/intelFPGA_lite/17.0/checkpoint4/imem.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file dmem.v
+    Info (12023): Found entity 1: dmem File: C:/intelFPGA_lite/17.0/checkpoint4/dmem.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: alu File: C:/intelFPGA_lite/17.0/checkpoint4/alu.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sx.v
     Info (12023): Found entity 1: SX File: C:/intelFPGA_lite/17.0/checkpoint4/SX.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control.v
     Info (12023): Found entity 1: Control File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at Control.v(23): created implicit net for "lw" File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 23
-Info (12127): Elaborating entity "skeleton" for the top level hierarchy
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 65
-Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 91
-Warning (10036): Verilog HDL or VHDL warning at processor.v(95): object "opcode" assigned a value but never read File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 95
-Warning (10858): Verilog HDL warning at processor.v(99): object Rwe used but never assigned File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 99
-Warning (10858): Verilog HDL warning at processor.v(99): object Rdst used but never assigned File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 99
-Warning (10858): Verilog HDL warning at processor.v(99): object ALUinB used but never assigned File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 99
-Warning (10858): Verilog HDL warning at processor.v(99): object Rwd used but never assigned File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 99
-Warning (10030): Net "Rwe" at processor.v(99) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 99
-Warning (10030): Net "Rdst" at processor.v(99) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 99
-Warning (10030): Net "ALUinB" at processor.v(99) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 99
-Warning (10030): Net "Rwd" at processor.v(99) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 99
-Warning (10034): Output port "address_imem" at processor.v(78) has no driver File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 78
-Warning (10034): Output port "wren" at processor.v(84) has no driver File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 84
-Info (12128): Elaborating entity "SX" for hierarchy "processor:my_processor|SX:SX0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 134
-Info (12128): Elaborating entity "alu" for hierarchy "processor:my_processor|alu:alu0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 147
+Info (12021): Found 1 design units, including 1 entities, in source file plus4.v
+    Info (12023): Found entity 1: plus4 File: C:/intelFPGA_lite/17.0/checkpoint4/plus4.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at plus4.v(16): instance has no name File: C:/intelFPGA_lite/17.0/checkpoint4/plus4.v Line: 16
+Info (12127): Elaborating entity "plus4" for the top level hierarchy
+Info (12128): Elaborating entity "alu" for hierarchy "alu:comb_35" File: C:/intelFPGA_lite/17.0/checkpoint4/plus4.v Line: 16
 Warning (10270): Verilog HDL Case Statement warning at alu.v(25): incomplete case statement has no default case item File: C:/intelFPGA_lite/17.0/checkpoint4/alu.v Line: 25
-Error (12006): Node instance "my_imem" instantiates undefined entity "imem". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 32
-Error (12006): Node instance "my_dmem" instantiates undefined entity "dmem". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 47
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/17.0/checkpoint4/output_files/skeleton.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 14 warnings
-    Error: Peak virtual memory: 4715 megabytes
-    Error: Processing ended: Sat Oct 14 23:59:17 2023
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:06
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 33 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 9 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4735 megabytes
+    Info: Processing ended: Sun Oct 22 21:22:32 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +------------------------------------------+
