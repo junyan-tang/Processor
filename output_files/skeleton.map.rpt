@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Mon Oct 23 16:25:16 2023
+Tue Oct 24 14:37:17 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -22,13 +22,12 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  14. Parameter Settings for User Entity Instance: dmem:my_dmem|altsyncram:altsyncram_component
  15. altsyncram Parameter Settings by Entity Instance
  16. Port Connectivity Checks: "processor:my_processor|alu:alu0"
- 17. Port Connectivity Checks: "processor:my_processor|Control:control0"
- 18. Port Connectivity Checks: "processor:my_processor|reg_12bit:PC"
- 19. Port Connectivity Checks: "processor:my_processor|plus1:plus1_0|alu:alu_insn"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+ 17. Port Connectivity Checks: "processor:my_processor|reg_12bit:PC"
+ 18. Port Connectivity Checks: "processor:my_processor|plus1:plus1_0|alu:alu_insn"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,7 +54,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 23 16:25:16 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 24 14:37:17 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; skeleton                                    ;
@@ -232,8 +231,8 @@ agreement for further details.
 ;                                             ;                                ;
 ; Embedded Multiplier 9-bit elements          ; 0                              ;
 ;                                             ;                                ;
-; Maximum fan-out node                        ; clock_divider_by2:dmem|out_clk ;
-; Maximum fan-out                             ; 4                              ;
+; Maximum fan-out node                        ; clock_divider_by2:imem|out_clk ;
+; Maximum fan-out                             ; 3                              ;
 ; Total fan-out                               ; 18                             ;
 ; Average fan-out                             ; 1.13                           ;
 +---------------------------------------------+--------------------------------+
@@ -246,7 +245,7 @@ agreement for further details.
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+-------------------+--------------+
 ; |skeleton                       ; 2 (0)               ; 2 (0)                     ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |skeleton                            ; skeleton          ; work         ;
 ;    |clock_divider_by2:clk_base| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|clock_divider_by2:clk_base ; clock_divider_by2 ; work         ;
-;    |clock_divider_by2:dmem|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|clock_divider_by2:dmem     ; clock_divider_by2 ; work         ;
+;    |clock_divider_by2:imem|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|clock_divider_by2:imem     ; clock_divider_by2 ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1301,9 +1300,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:my_regfile|registers[0][2]                                ; Lost fanout                                ;
 ; regfile:my_regfile|registers[0][1]                                ; Lost fanout                                ;
 ; regfile:my_regfile|registers[0][0]                                ; Lost fanout                                ;
-; clock_divider_by2:imem|out_clk                                    ; Merged with clock_divider_by2:dmem|out_clk ;
-; clock_divider_by2:regfile|out_clk                                 ; Merged with clock_divider_by2:dmem|out_clk ;
-; Total Number of Removed Registers = 1038                          ;                                            ;
+; clock_divider_by2:regfile|out_clk                                 ; Merged with clock_divider_by2:imem|out_clk ;
+; Total Number of Removed Registers = 1037                          ;                                            ;
 +-------------------------------------------------------------------+--------------------------------------------+
 
 
@@ -1493,35 +1491,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:my_processor|alu:alu0"                                                                                                                                 ;
-+----------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                                                                                                ;
-+----------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; ctrl_ALUopcode ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "ctrl_ALUopcode[4..1]" will be connected to GND. ;
-; isNotEqual     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                    ;
-; isLessThan     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                    ;
-; overflow       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                    ;
-+----------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|alu:alu0"                                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; isNotEqual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; isLessThan ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:my_processor|Control:control0"                                                                                  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; ALUop ; Output ; Warning  ; Output or bidir port (5 bits) is wider than the port expression (1 bits) it drives; bit(s) "ALUop[4..1]" have no fanouts ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:my_processor|reg_12bit:PC"                                                                                                                                                ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; en     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; en[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "processor:my_processor|reg_12bit:PC" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                          ;
++------+-------+----------+---------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------+
@@ -1573,7 +1560,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Oct 23 16:25:07 2023
+    Info: Processing started: Tue Oct 24 14:37:08 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1603,14 +1590,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file skeleto
     Info (12023): Found entity 1: skeleton_tb File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file imem.v
     Info (12023): Found entity 1: imem File: C:/intelFPGA_lite/17.0/checkpoint4/imem.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at processor.v(129): created implicit net for "ALUop" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 129
 Warning (10236): Verilog HDL Implicit Net warning at skeleton_tb.v(17): created implicit net for "imem_clock" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v Line: 17
 Warning (10236): Verilog HDL Implicit Net warning at skeleton_tb.v(17): created implicit net for "dmem_clock" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v Line: 17
 Warning (10236): Verilog HDL Implicit Net warning at skeleton_tb.v(17): created implicit net for "processor_clock" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v Line: 17
 Warning (10236): Verilog HDL Implicit Net warning at skeleton_tb.v(17): created implicit net for "regfile_clock" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v Line: 17
 Info (12127): Elaborating entity "skeleton" for the top level hierarchy
-Info (12128): Elaborating entity "clock_divider_by2" for hierarchy "clock_divider_by2:clk_base" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 25
-Info (12128): Elaborating entity "imem" for hierarchy "imem:my_imem" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 40
+Info (12128): Elaborating entity "clock_divider_by2" for hierarchy "clock_divider_by2:clk_base" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 27
+Info (12128): Elaborating entity "imem" for hierarchy "imem:my_imem" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 42
 Info (12128): Elaborating entity "altsyncram" for hierarchy "imem:my_imem|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/17.0/checkpoint4/imem.v Line: 82
 Info (12130): Elaborated megafunction instantiation "imem:my_imem|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/17.0/checkpoint4/imem.v Line: 82
 Info (12133): Instantiated megafunction "imem:my_imem|altsyncram:altsyncram_component" with the following parameter: File: C:/intelFPGA_lite/17.0/checkpoint4/imem.v Line: 82
@@ -1631,7 +1617,7 @@ Info (12133): Instantiated megafunction "imem:my_imem|altsyncram:altsyncram_comp
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_v2e1.tdf
     Info (12023): Found entity 1: altsyncram_v2e1 File: C:/intelFPGA_lite/17.0/checkpoint4/db/altsyncram_v2e1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_v2e1" for hierarchy "imem:my_imem|altsyncram:altsyncram_component|altsyncram_v2e1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "dmem" for hierarchy "dmem:my_dmem" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 55
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:my_dmem" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 57
 Info (12128): Elaborating entity "altsyncram" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/17.0/checkpoint4/dmem.v Line: 86
 Info (12130): Elaborated megafunction instantiation "dmem:my_dmem|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/17.0/checkpoint4/dmem.v Line: 86
 Info (12133): Instantiated megafunction "dmem:my_dmem|altsyncram:altsyncram_component" with the following parameter: File: C:/intelFPGA_lite/17.0/checkpoint4/dmem.v Line: 86
@@ -1652,22 +1638,22 @@ Info (12133): Instantiated megafunction "dmem:my_dmem|altsyncram:altsyncram_comp
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0jf1.tdf
     Info (12023): Found entity 1: altsyncram_0jf1 File: C:/intelFPGA_lite/17.0/checkpoint4/db/altsyncram_0jf1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_0jf1" for hierarchy "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 73
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 75
 Warning (10240): Verilog HDL Always Construct warning at regfile.v(13): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.0/checkpoint4/regfile.v Line: 13
-Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 99
-Info (12128): Elaborating entity "plus1" for hierarchy "processor:my_processor|plus1:plus1_0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 115
+Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 101
+Info (12128): Elaborating entity "plus1" for hierarchy "processor:my_processor|plus1:plus1_0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 116
 Info (12128): Elaborating entity "alu" for hierarchy "processor:my_processor|plus1:plus1_0|alu:alu_insn" File: C:/intelFPGA_lite/17.0/checkpoint4/plus1.v Line: 16
 Warning (10270): Verilog HDL Case Statement warning at alu.v(25): incomplete case statement has no default case item File: C:/intelFPGA_lite/17.0/checkpoint4/alu.v Line: 25
-Info (12128): Elaborating entity "reg_12bit" for hierarchy "processor:my_processor|reg_12bit:PC" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 116
+Info (12128): Elaborating entity "reg_12bit" for hierarchy "processor:my_processor|reg_12bit:PC" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 117
 Info (12128): Elaborating entity "dffe_ref" for hierarchy "processor:my_processor|reg_12bit:PC|dffe_ref:reg_loop[0].dffe0" File: C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v Line: 10
-Info (12128): Elaborating entity "Control" for hierarchy "processor:my_processor|Control:control0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 129
+Info (12128): Elaborating entity "Control" for hierarchy "processor:my_processor|Control:control0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 130
 Warning (10230): Verilog HDL assignment warning at Control.v(12): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 12
 Warning (10230): Verilog HDL assignment warning at Control.v(18): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 18
 Warning (10230): Verilog HDL assignment warning at Control.v(32): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 32
 Warning (10230): Verilog HDL assignment warning at Control.v(35): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 35
 Warning (10230): Verilog HDL assignment warning at Control.v(38): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 38
 Warning (10230): Verilog HDL assignment warning at Control.v(42): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 42
-Info (12128): Elaborating entity "SX" for hierarchy "processor:my_processor|SX:SX0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 141
+Info (12128): Elaborating entity "SX" for hierarchy "processor:my_processor|SX:SX0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 142
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[0]" File: C:/intelFPGA_lite/17.0/checkpoint4/db/altsyncram_0jf1.tdf Line: 37
@@ -1734,7 +1720,6 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "imem:my_imem|altsyncram:altsyncram_component|altsyncram_v2e1:auto_generated|q_a[29]" File: C:/intelFPGA_lite/17.0/checkpoint4/db/altsyncram_v2e1.tdf Line: 673
         Warning (14320): Synthesized away node "imem:my_imem|altsyncram:altsyncram_component|altsyncram_v2e1:auto_generated|q_a[30]" File: C:/intelFPGA_lite/17.0/checkpoint4/db/altsyncram_v2e1.tdf Line: 695
         Warning (14320): Synthesized away node "imem:my_imem|altsyncram:altsyncram_component|altsyncram_v2e1:auto_generated|q_a[31]" File: C:/intelFPGA_lite/17.0/checkpoint4/db/altsyncram_v2e1.tdf Line: 717
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1036 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/17.0/checkpoint4/output_files/skeleton.map.smsg
@@ -1744,11 +1729,11 @@ Info (21057): Implemented 8 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 81 warnings
-    Info: Peak virtual memory: 4799 megabytes
-    Info: Processing ended: Mon Oct 23 16:25:16 2023
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 79 warnings
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Tue Oct 24 14:37:17 2023
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +------------------------------------------+

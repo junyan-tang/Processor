@@ -1,8 +1,8 @@
 |skeleton
-clock => processor_clock.IN2
-reset => reset.IN6
-imem_clock << imem_clock.DB_MAX_OUTPUT_PORT_TYPE
-dmem_clock << dmem_clock.DB_MAX_OUTPUT_PORT_TYPE
+clock => clock.IN3
+reset => reset.IN5
+imem_clock << clock.DB_MAX_OUTPUT_PORT_TYPE
+dmem_clock << clock.DB_MAX_OUTPUT_PORT_TYPE
 processor_clock << processor_clock.DB_MAX_OUTPUT_PORT_TYPE
 regfile_clock << regfile_clock.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -14,12 +14,6 @@ out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |skeleton|clock_divider_by2:imem
-clk => out_clk~reg0.CLK
-rst => out_clk.OUTPUTSELECT
-out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|skeleton|clock_divider_by2:dmem
 clk => out_clk~reg0.CLK
 rst => out_clk.OUTPUTSELECT
 out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE

@@ -108,12 +108,13 @@ module processor(
 	 
 	 //alu
 	 wire isNotEqual, isLessThan, overflow;
+	 wire [4:0] ALUop;
 	 wire [31:0] ALU_result;
 	 
 	 //PC
 	 wire [11:0] PCplus4;
 	 plus1 plus1_0(address_imem,PCplus4);
-	 reg_12bit PC(address_imem,PCplus4,clock,1,reset);
+	 reg_12bit PC(address_imem,PCplus4,clock,1'b1,reset);
 	 
 	 
 	 
