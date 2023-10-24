@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
-// DATE "10/24/2023 14:37:35"
+// DATE "10/24/2023 15:00:05"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -76,8 +76,8 @@ wire \reset~input_o ;
 wire \clk_base|out_clk~0_combout ;
 wire \clk_base|out_clk~feeder_combout ;
 wire \clk_base|out_clk~q ;
-wire \imem|out_clk~0_combout ;
-wire \imem|out_clk~q ;
+wire \processor_clk|out_clk~0_combout ;
+wire \processor_clk|out_clk~q ;
 
 
 hard_block auto_generated_inst(
@@ -113,7 +113,7 @@ defparam \dmem_clock~output .open_drain_output = "false";
 
 // Location: IOOBUF_X1_Y0_N23
 cycloneive_io_obuf \processor_clock~output (
-	.i(\imem|out_clk~q ),
+	.i(\processor_clk|out_clk~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -126,7 +126,7 @@ defparam \processor_clock~output .open_drain_output = "false";
 
 // Location: IOOBUF_X1_Y0_N2
 cycloneive_io_obuf \regfile_clock~output (
-	.i(\imem|out_clk~q ),
+	.i(\processor_clk|out_clk~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -211,26 +211,26 @@ defparam \clk_base|out_clk .power_up = "low";
 // synopsys translate_on
 
 // Location: LCCOMB_X1_Y4_N28
-cycloneive_lcell_comb \imem|out_clk~0 (
+cycloneive_lcell_comb \processor_clk|out_clk~0 (
 // Equation(s):
-// \imem|out_clk~0_combout  = (!\imem|out_clk~q  & !\reset~input_o )
+// \processor_clk|out_clk~0_combout  = (!\processor_clk|out_clk~q  & !\reset~input_o )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(\imem|out_clk~q ),
+	.datac(\processor_clk|out_clk~q ),
 	.datad(\reset~input_o ),
 	.cin(gnd),
-	.combout(\imem|out_clk~0_combout ),
+	.combout(\processor_clk|out_clk~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \imem|out_clk~0 .lut_mask = 16'h000F;
-defparam \imem|out_clk~0 .sum_lutc_input = "datac";
+defparam \processor_clk|out_clk~0 .lut_mask = 16'h000F;
+defparam \processor_clk|out_clk~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: FF_X1_Y4_N29
-dffeas \imem|out_clk (
+dffeas \processor_clk|out_clk (
 	.clk(\clk_base|out_clk~q ),
-	.d(\imem|out_clk~0_combout ),
+	.d(\processor_clk|out_clk~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -239,11 +239,11 @@ dffeas \imem|out_clk (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\imem|out_clk~q ),
+	.q(\processor_clk|out_clk~q ),
 	.prn(vcc));
 // synopsys translate_off
-defparam \imem|out_clk .is_wysiwyg = "true";
-defparam \imem|out_clk .power_up = "low";
+defparam \processor_clk|out_clk .is_wysiwyg = "true";
+defparam \processor_clk|out_clk .power_up = "low";
 // synopsys translate_on
 
 assign imem_clock = \imem_clock~output_o ;
