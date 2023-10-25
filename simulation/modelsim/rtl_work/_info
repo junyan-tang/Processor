@@ -7,47 +7,47 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/ECE550/Processor/simulation/modelsim
+Z0 dC:/intelFPGA_lite/17.0/checkpoint4/simulation/modelsim
 valu
-Z1 !s110 1698201298
+Z1 !s110 1698240708
 !i10b 1
 !s100 CM2POFHhm`MRQRPIcjMQG0
-IGn?1A`m9FRCBYmN]aYVTb1
+Ik`72fEhiY4lm93`=@B[gE3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1697157964
-8C:/ECE550/Processor/alu.v
-FC:/ECE550/Processor/alu.v
+w1697156629
+8C:/intelFPGA_lite/17.0/checkpoint4/alu.v
+FC:/intelFPGA_lite/17.0/checkpoint4/alu.v
 L0 1
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1698201298.000000
-!s107 C:/ECE550/Processor/alu.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/alu.v|
+Z4 !s108 1698240708.000000
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/alu.v|
 !i113 1
 Z5 o-vlog01compat -work work
-Z6 !s92 -vlog01compat -work work +incdir+C:/ECE550/Processor
+Z6 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4
 Z7 tCvgOpt 0
 vclk_dffe
 R1
 !i10b 1
 !s100 nOKljP55OReI9B3jiSH4n3
-IC6TGJMK@iDF0>J@A7VnZe0
+I=X>6jeImo]VRQl]45gORN0
 R2
 R0
-Z8 w1698195069
-Z9 8C:/ECE550/Processor/clock_divider_by2.v
-Z10 FC:/ECE550/Processor/clock_divider_by2.v
+Z8 w1698201834
+Z9 8C:/intelFPGA_lite/17.0/checkpoint4/clock_divider_by2.v
+Z10 FC:/intelFPGA_lite/17.0/checkpoint4/clock_divider_by2.v
 L0 14
 R3
 r1
 !s85 0
 31
 R4
-Z11 !s107 C:/ECE550/Processor/clock_divider_by2.v|
-Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/clock_divider_by2.v|
+Z11 !s107 C:/intelFPGA_lite/17.0/checkpoint4/clock_divider_by2.v|
+Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/clock_divider_by2.v|
 !i113 1
 R5
 R6
@@ -56,7 +56,7 @@ vclock_divider_by2
 R1
 !i10b 1
 !s100 UDUe3f]?YS33K075`W4>L2
-I;TP^HVV9z]d6ZW_2[mV4B0
+I<RW=LT2AlP6;eT758:IjK2
 R2
 R0
 R8
@@ -77,44 +77,44 @@ R7
 vControl
 R1
 !i10b 1
-!s100 iK@_85OU5RmYeHCO>68f@1
-IladF::41^2a<^4SzAeO0i2
+!s100 l<:jl[W_I3e]aiLTPme0^3
+I1d;?U<FUm6YBb2g[JM<0^3
 R2
 R0
-w1698199748
-8C:/ECE550/Processor/Control.v
-FC:/ECE550/Processor/Control.v
+w1698240234
+8C:/intelFPGA_lite/17.0/checkpoint4/Control.v
+FC:/intelFPGA_lite/17.0/checkpoint4/Control.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/ECE550/Processor/Control.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/Control.v|
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/Control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/Control.v|
 !i113 1
 R5
 R6
 R7
 n@control
 vdffe_ref
-Z13 !s110 1698201297
+Z13 !s110 1698240706
 !i10b 1
 !s100 m2?1a8:`omUTO_3UK>MQz1
-IOk97Dk;lJ[daF[lhh]M3>0
+IEX:]mMR4PDH;lbNH7d]W42
 R2
 R0
-Z14 w1698077170
-8C:/ECE550/Processor/dffe.v
-FC:/ECE550/Processor/dffe.v
+w1696715716
+8C:/intelFPGA_lite/17.0/checkpoint4/dffe.v
+FC:/intelFPGA_lite/17.0/checkpoint4/dffe.v
 L0 1
 R3
 r1
 !s85 0
 31
-Z15 !s108 1698201297.000000
-!s107 C:/ECE550/Processor/dffe.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/dffe.v|
+Z14 !s108 1698240706.000000
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/dffe.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/dffe.v|
 !i113 1
 R5
 R6
@@ -123,86 +123,86 @@ vdmem
 R1
 !i10b 1
 !s100 Ig2U5z`UQ`aKkLjgP8hjc1
-ITShAOaj7U;^jV@;1G>VVQ3
+I2;:ijEPY>i_XMa<d2jcB_3
 R2
 R0
-w1698082183
-8C:/ECE550/Processor/dmem.v
-FC:/ECE550/Processor/dmem.v
+Z15 w1698089716
+8C:/intelFPGA_lite/17.0/checkpoint4/dmem.v
+FC:/intelFPGA_lite/17.0/checkpoint4/dmem.v
 Z16 L0 40
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/ECE550/Processor/dmem.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/dmem.v|
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/dmem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/dmem.v|
 !i113 1
 R5
 R6
 R7
 vimem
-Z17 !s110 1698201299
+R1
 !i10b 1
-!s100 WZOleLKNTngADgSaJ1C`>2
-InKXHcaNC]U=;hX_zjC9n@3
+!s100 1PRiA1;5Bb3JJA5cKSWgz0
+I7YYekM2b^XJ:GB1jcSMzL3
 R2
 R0
-w1698195696
-8C:/ECE550/Processor/imem.v
-FC:/ECE550/Processor/imem.v
+w1698240662
+8C:/intelFPGA_lite/17.0/checkpoint4/imem.v
+FC:/intelFPGA_lite/17.0/checkpoint4/imem.v
 R16
 R3
 r1
 !s85 0
 31
-Z18 !s108 1698201299.000000
-!s107 C:/ECE550/Processor/imem.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/imem.v|
+R4
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/imem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/imem.v|
 !i113 1
 R5
 R6
 R7
 vplus1
-R17
+R1
 !i10b 1
 !s100 ;RLamBmBkm5jZi;71?KBU1
-I^2zaW=EmG5gF^AMlBLzNh3
+I?W6b0f8[z0C@9Wdk^17V_2
 R2
 R0
-w1698088783
-8C:/ECE550/Processor/plus1.v
-FC:/ECE550/Processor/plus1.v
+R15
+8C:/intelFPGA_lite/17.0/checkpoint4/plus1.v
+FC:/intelFPGA_lite/17.0/checkpoint4/plus1.v
 L0 1
 R3
 r1
 !s85 0
 31
-R18
-!s107 C:/ECE550/Processor/plus1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/plus1.v|
+R4
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/plus1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/plus1.v|
 !i113 1
 R5
 R6
 R7
 vprocessor
-R13
+R1
 !i10b 1
-!s100 IB;Jd==Mg22EY@M6?91lV2
-ICEb1a4;Z1CN4<HEg;o[f:0
+!s100 0><ZLWbk^flKm?mdIV<4Q3
+IHIzSQ2A;5IP4jNQOD3H9d2
 R2
 R0
-w1698201260
-8C:/ECE550/Processor/processor.v
-FC:/ECE550/Processor/processor.v
+w1698240339
+8C:/intelFPGA_lite/17.0/checkpoint4/processor.v
+FC:/intelFPGA_lite/17.0/checkpoint4/processor.v
 L0 50
 R3
 r1
 !s85 0
 31
-R15
-!s107 C:/ECE550/Processor/processor.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/processor.v|
+R4
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/processor.v|
 !i113 1
 R5
 R6
@@ -211,42 +211,42 @@ vreg_12bit
 R1
 !i10b 1
 !s100 ?2?hJ<MkeR3F[fTh<HndY0
-I`mn83D6_fmg0[YhR4zJgl0
+I0^eN_eK3NdBRii7^E<HkJ0
 R2
 R0
-R14
-8C:/ECE550/Processor/reg_12bit.v
-FC:/ECE550/Processor/reg_12bit.v
+w1698024820
+8C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v
+FC:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/ECE550/Processor/reg_12bit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/reg_12bit.v|
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v|
 !i113 1
 R5
 R6
 R7
 vregfile
-R13
+R1
 !i10b 1
 !s100 =W4YeYh>3kkG6^XN@]O3M1
-IeBbIFKGgk4lj0Tj?N^ATI1
+IiBGolH9F>>iCZzlLZFO`@2
 R2
 R0
-w1698196304
-8C:/ECE550/Processor/regfile.v
-FC:/ECE550/Processor/regfile.v
+R8
+8C:/intelFPGA_lite/17.0/checkpoint4/regfile.v
+FC:/intelFPGA_lite/17.0/checkpoint4/regfile.v
 L0 1
 R3
 r1
 !s85 0
 31
-R15
-!s107 C:/ECE550/Processor/regfile.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/regfile.v|
+R4
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/regfile.v|
 !i113 1
 R5
 R6
@@ -255,42 +255,42 @@ vskeleton
 R13
 !i10b 1
 !s100 WIlTOTnDfmGFYmPDbMDMj2
-I=f<D<K<^?07^Sa8:d8PCR2
+Ig`<bAG4MY3oOS>0CRJ@WL1
 R2
 R0
-w1698194779
-8C:/ECE550/Processor/skeleton.v
-FC:/ECE550/Processor/skeleton.v
+R8
+8C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v
+FC:/intelFPGA_lite/17.0/checkpoint4/skeleton.v
 L0 12
 R3
 r1
 !s85 0
 31
-R15
-!s107 C:/ECE550/Processor/skeleton.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/skeleton.v|
+R14
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v|
 !i113 1
 R5
 R6
 R7
 vskeleton_tb
-R17
+R1
 !i10b 1
 !s100 zjK1N<<L6L2bMId?O6b1X3
-IJ5bY_:N:F7KcR?@NAaDl=0
+Ii?Wbc4YJdz03a9]fIfU[^3
 R2
 R0
-w1698198933
-8C:/ECE550/Processor/skeleton_tb.v
-FC:/ECE550/Processor/skeleton_tb.v
+R8
+8C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v
+FC:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v
 L0 2
 R3
 r1
 !s85 0
 31
-R18
-!s107 C:/ECE550/Processor/skeleton_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/skeleton_tb.v|
+R4
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v|
 !i113 1
 R5
 R6
@@ -299,20 +299,20 @@ vSX
 R1
 !i10b 1
 !s100 ZXD`=JJ170lIGZc6ni3Mg0
-I5_>fAUBPm6Ld`G[N<fF871
+I7mEPCQlnin3JSZROc3LmE1
 R2
 R0
-w1697722106
-8C:/ECE550/Processor/SX.v
-FC:/ECE550/Processor/SX.v
+w1697339550
+8C:/intelFPGA_lite/17.0/checkpoint4/SX.v
+FC:/intelFPGA_lite/17.0/checkpoint4/SX.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/ECE550/Processor/SX.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE550/Processor|C:/ECE550/Processor/SX.v|
+!s107 C:/intelFPGA_lite/17.0/checkpoint4/SX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/17.0/checkpoint4|C:/intelFPGA_lite/17.0/checkpoint4/SX.v|
 !i113 1
 R5
 R6

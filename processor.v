@@ -96,20 +96,21 @@ module processor(
 	 wire [16:0] Immediate;
 	 
 	 //signal
-	 wire Rwe,ALUinB,DMwe,Rwd, Rdst;
+	 wire Rwe,ALUinB,DMwe,Rwd, Rdst,add,addi,sub;
 	 
 	 //I-type
 	 wire [31:0] Immediate_full;
 	 wire [31:0] data_B;
 	 
 	 //Regfile
-	 wire [4:0] Reg_t;
+	 wire [4:0] Reg_d;
 	 wire [31:0] Reg_datawrite;
 	 
 	 //alu
 	 wire isNotEqual, isLessThan, overflow;
 	 wire [4:0] ALUop;
 	 wire [31:0] ALU_result;
+	 wire [31:0] ALU_result_overflow;
 	 
 	 //PC
 	 wire [11:0] PCplus1;
@@ -127,14 +128,16 @@ module processor(
 	 assign Func = q_imem[6:2];
 	 assign Immediate = q_imem[16:0];
 	 
-	 Control control0(opcode,Func,Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd);
+	 Control control0(opcode,Func,Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd,add,addi,sub);
 	 
 	 //Regfile 
+	 assign Reg_d=overflow?5'b11110:rd;
+	 
     assign ctrl_writeEnable = Rwe;
-    assign ctrl_writeReg = rd;
+    assign ctrl_writeReg = Reg_d;
 	 assign ctrl_readRegA = rs;
 	 assign ctrl_readRegB = rt;
-    assign data_writeReg = Rwd?q_dmem:ALU_result;
+    assign data_writeReg = Rwd?q_dmem:ALU_result_overflow;
 	 
 	 //I-type
 	 SX SX0(Immediate,Immediate_full);
@@ -151,6 +154,7 @@ module processor(
 			.isLessThan        (isLessThan), 
 			.overflow          (overflow)
 	);
+	assign ALU_result_overflow=overflow?(add?1:(addi?2:(sub?3:0))):ALU_result;
 	
 	//data mem
 	assign wren = DMwe;
