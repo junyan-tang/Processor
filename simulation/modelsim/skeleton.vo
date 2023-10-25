@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
-// DATE "10/25/2023 10:27:32"
+// DATE "10/25/2023 13:42:07"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -127,7 +127,7 @@ defparam \processor_clock~output .open_drain_output = "false";
 
 // Location: IOOBUF_X0_Y68_N2
 cycloneive_io_obuf \regfile_clock~output (
-	.i(!\clk4|dff_ins|q~q ),
+	.i(\clk4|dff_ins|q~q ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),

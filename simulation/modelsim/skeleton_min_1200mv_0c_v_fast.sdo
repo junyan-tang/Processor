@@ -30,7 +30,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "skeleton")
-  (DATE "10/25/2023 10:27:32")
+  (DATE "10/25/2023 13:42:07")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition")
@@ -72,8 +72,8 @@
     (INSTANCE regfile_clock\~output)
     (DELAY
       (ABSOLUTE
-        (PORT i (229:229:229) (189:189:189))
-        (IOPATH i o (1654:1654:1654) (1629:1629:1629))
+        (PORT i (189:189:189) (229:229:229))
+        (IOPATH i o (1629:1629:1629) (1654:1654:1654))
       )
     )
   )

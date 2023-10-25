@@ -4,7 +4,7 @@ reset => reset.IN4
 imem_clock << clock.DB_MAX_OUTPUT_PORT_TYPE
 dmem_clock << dmem_clock.DB_MAX_OUTPUT_PORT_TYPE
 processor_clock << clock_4_.DB_MAX_OUTPUT_PORT_TYPE
-regfile_clock << clock_4_.DB_MAX_OUTPUT_PORT_TYPE
+regfile_clock << regfile_clock.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |skeleton|clk_dffe:clk2
@@ -4843,14 +4843,19 @@ q_imem[20] => ctrl_readRegA[3].DATAIN
 q_imem[21] => ctrl_readRegA[4].DATAIN
 q_imem[22] => Reg_d.DATAA
 q_imem[22] => Reg_d.DATAA
+q_imem[22] => Reg_t.DATAB
 q_imem[23] => Reg_d.DATAA
 q_imem[23] => Reg_d.DATAA
+q_imem[23] => Reg_t.DATAB
 q_imem[24] => Reg_d.DATAA
 q_imem[24] => Reg_d.DATAA
+q_imem[24] => Reg_t.DATAB
 q_imem[25] => Reg_d.DATAA
 q_imem[25] => Reg_d.DATAA
+q_imem[25] => Reg_t.DATAB
 q_imem[26] => Reg_d.DATAA
 q_imem[26] => Reg_d.DATAA
+q_imem[26] => Reg_t.DATAB
 q_imem[27] => opcode[0].IN1
 q_imem[28] => opcode[1].IN1
 q_imem[29] => opcode[2].IN1
@@ -4944,11 +4949,11 @@ ctrl_readRegA[1] <= q_imem[18].DB_MAX_OUTPUT_PORT_TYPE
 ctrl_readRegA[2] <= q_imem[19].DB_MAX_OUTPUT_PORT_TYPE
 ctrl_readRegA[3] <= q_imem[20].DB_MAX_OUTPUT_PORT_TYPE
 ctrl_readRegA[4] <= q_imem[21].DB_MAX_OUTPUT_PORT_TYPE
-ctrl_readRegB[0] <= Immediate[12].DB_MAX_OUTPUT_PORT_TYPE
-ctrl_readRegB[1] <= Immediate[13].DB_MAX_OUTPUT_PORT_TYPE
-ctrl_readRegB[2] <= Immediate[14].DB_MAX_OUTPUT_PORT_TYPE
-ctrl_readRegB[3] <= Immediate[15].DB_MAX_OUTPUT_PORT_TYPE
-ctrl_readRegB[4] <= Immediate[16].DB_MAX_OUTPUT_PORT_TYPE
+ctrl_readRegB[0] <= Reg_t.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_readRegB[1] <= Reg_t.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_readRegB[2] <= Reg_t.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_readRegB[3] <= Reg_t.DB_MAX_OUTPUT_PORT_TYPE
+ctrl_readRegB[4] <= Reg_t.DB_MAX_OUTPUT_PORT_TYPE
 data_writeReg[0] <= data_writeReg.DB_MAX_OUTPUT_PORT_TYPE
 data_writeReg[1] <= data_writeReg.DB_MAX_OUTPUT_PORT_TYPE
 data_writeReg[2] <= data_writeReg.DB_MAX_OUTPUT_PORT_TYPE

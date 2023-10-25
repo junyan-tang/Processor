@@ -103,7 +103,7 @@ module processor(
 	 wire [31:0] data_B;
 	 
 	 //Regfile
-	 wire [4:0] Reg_d;
+	 wire [4:0] Reg_d,Reg_t;
 	 wire [31:0] Reg_datawrite;
 	 wire isr0;
 	 
@@ -133,11 +133,12 @@ module processor(
 	 
 	 //Regfile 
 	 assign Reg_d=overflow?(add?5'b11110:(addi?5'b11110:(sub?5'b11110:rd))):rd;
+	 assign Reg_t=DMwe?rd:rt;
 	 
     assign ctrl_writeEnable = Rwe;
     assign ctrl_writeReg = Reg_d;
 	 assign ctrl_readRegA = rs;
-	 assign ctrl_readRegB = rt;
+	 assign ctrl_readRegB = Reg_t;
     assign data_writeReg = isr0?0:(Rwd?q_dmem:ALU_result_overflow);
 	 
 	 assign isr0 = Reg_d[4]?0:(Reg_d[3]?0:(Reg_d[2]?0:(Reg_d[1]?0:(Reg_d[0]?0:1))));
