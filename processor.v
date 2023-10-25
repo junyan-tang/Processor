@@ -105,6 +105,7 @@ module processor(
 	 //Regfile
 	 wire [4:0] Reg_d;
 	 wire [31:0] Reg_datawrite;
+	 wire isr0;
 	 
 	 //alu
 	 wire isNotEqual, isLessThan, overflow;
@@ -131,13 +132,15 @@ module processor(
 	 Control control0(opcode,Func,Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd,add,addi,sub);
 	 
 	 //Regfile 
-	 assign Reg_d=overflow?5'b11110:rd;
+	 assign Reg_d=overflow?(add?5'b11110:(addi?5'b11110:(sub?5'b11110:rd))):rd;
 	 
     assign ctrl_writeEnable = Rwe;
     assign ctrl_writeReg = Reg_d;
 	 assign ctrl_readRegA = rs;
 	 assign ctrl_readRegB = rt;
-    assign data_writeReg = Rwd?q_dmem:ALU_result_overflow;
+    assign data_writeReg = isr0?0:(Rwd?q_dmem:ALU_result_overflow);
+	 
+	 assign isr0 = Reg_d[4]?0:(Reg_d[3]?0:(Reg_d[2]?0:(Reg_d[1]?0:(Reg_d[0]?0:1))));
 	 
 	 //I-type
 	 SX SX0(Immediate,Immediate_full);
@@ -154,7 +157,7 @@ module processor(
 			.isLessThan        (isLessThan), 
 			.overflow          (overflow)
 	);
-	assign ALU_result_overflow=overflow?(add?1:(addi?2:(sub?3:0))):ALU_result;
+	assign ALU_result_overflow=overflow?(add?1:(addi?2:(sub?3:ALU_result))):ALU_result;
 	
 	//data mem
 	assign wren = DMwe;

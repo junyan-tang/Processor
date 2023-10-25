@@ -12,97 +12,97 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/dffe.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:46 on Oct 25,2023
+# Start time: 10:27:52 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/dffe.v 
 # -- Compiling module dffe_ref
 # 
 # Top level modules:
 # 	dffe_ref
-# End time: 09:31:46 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:52 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:46 on Oct 25,2023
+# Start time: 10:27:52 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v 
 # -- Compiling module skeleton
 # 
 # Top level modules:
 # 	skeleton
-# End time: 09:31:46 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:52 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/regfile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:52 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:53 on Oct 25,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/processor.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:53 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/processor.v 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:53 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/dmem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:53 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/dmem.v 
 # -- Compiling module dmem
 # 
 # Top level modules:
 # 	dmem
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:53 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/alu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:53 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:53 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/SX.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:53 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/SX.v 
 # -- Compiling module SX
 # 
 # Top level modules:
 # 	SX
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:53 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/Control.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:53 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/Control.v 
 # -- Compiling module Control
 # 
 # Top level modules:
 # 	Control
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:53 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:53 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/reg_12bit.v 
 # -- Compiling module reg_12bit
 # 
 # Top level modules:
 # 	reg_12bit
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:53 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/clock_divider_by2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:53 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/clock_divider_by2.v 
 # -- Compiling module clock_divider_by2
 # -- Compiling module clk_dffe
@@ -110,43 +110,43 @@
 # Top level modules:
 # 	clock_divider_by2
 # 	clk_dffe
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:54 on Oct 25,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/plus1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:54 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/plus1.v 
 # -- Compiling module plus1
 # 
 # Top level modules:
 # 	plus1
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:54 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/imem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:54 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/imem.v 
 # -- Compiling module imem
 # 
 # Top level modules:
 # 	imem
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:54 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/checkpoint4 {C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:54 on Oct 25,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/checkpoint4" C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v 
 # -- Compiling module skeleton_tb
 # 
 # Top level modules:
 # 	skeleton_tb
-# End time: 09:31:48 on Oct 25,2023, Elapsed time: 0:00:00
+# End time: 10:27:54 on Oct 25,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  skeleton_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" skeleton_tb 
-# Start time: 09:31:48 on Oct 25,2023
+# Start time: 10:27:54 on Oct 25,2023
 # Loading work.skeleton_tb
 # Loading work.clk_dffe
 # Loading work.dffe_ref
@@ -175,5 +175,5 @@
 # ** Note: $stop    : C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v(116)
 #    Time: 10040 ns  Iteration: 0  Instance: /skeleton_tb
 # Break in Module skeleton_tb at C:/intelFPGA_lite/17.0/checkpoint4/skeleton_tb.v line 116
-# End time: 09:45:28 on Oct 25,2023, Elapsed time: 0:13:40
+# End time: 10:53:30 on Oct 25,2023, Elapsed time: 0:25:36
 # Errors: 0, Warnings: 0
