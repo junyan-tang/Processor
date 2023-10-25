@@ -112,9 +112,9 @@ module processor(
 	 wire [31:0] ALU_result;
 	 
 	 //PC
-	 wire [11:0] PCplus4;
-	 plus1 plus1_0(address_imem,PCplus4);
-	 reg_12bit PC(address_imem,PCplus4,clock,1'b1,reset);
+	 wire [11:0] PCplus1;
+	 plus1 plus1_0(address_imem,PCplus1);
+	 reg_12bit PC(address_imem,PCplus1,clock,1'b1,reset);
 	 
 	 
 	 
@@ -129,11 +129,9 @@ module processor(
 	 
 	 Control control0(opcode,Func,Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd);
 	 
-	 //Regfile
-	 assign Reg_t = Rdst?rd:rt;
-	 
+	 //Regfile 
     assign ctrl_writeEnable = Rwe;
-    assign ctrl_writeReg = Reg_t;
+    assign ctrl_writeReg = rd;
 	 assign ctrl_readRegA = rs;
 	 assign ctrl_readRegB = rt;
     assign data_writeReg = Rwd?q_dmem:ALU_result;

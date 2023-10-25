@@ -37,7 +37,7 @@ module Control(
 	//Rwe
 	assign Rwe = op?1:(addi?1:(lw?1:0));
 	//Rdst
-	assign Rdst = op;
+	assign Rdst = ~op;
 	//ALUinB
 	assign ALUinB = addi?1:(sw?1:(lw?1:0));
 	//ALUop

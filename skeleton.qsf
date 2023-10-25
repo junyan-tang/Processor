@@ -59,9 +59,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME skeleton_tb -section_id eda_simu
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id skeleton_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME skeleton_tb -section_id skeleton_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE skeleton_tb.v -section_id skeleton_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIF_FILE mif_outputs/basic_test.mif
 set_global_assignment -name VERILOG_FILE dffe.v
 set_global_assignment -name VERILOG_FILE skeleton.v
@@ -70,13 +67,13 @@ set_global_assignment -name VERILOG_FILE processor.v
 set_global_assignment -name VERILOG_FILE dmem.v
 set_global_assignment -name VERILOG_FILE alu.v
 set_global_assignment -name VERILOG_FILE SX.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VERILOG_FILE Control.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VERILOG_FILE reg_12bit.v
 set_global_assignment -name VERILOG_FILE clock_divider_by2.v
 set_global_assignment -name VERILOG_FILE plus1.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
 set_global_assignment -name VERILOG_FILE skeleton_tb.v
 set_global_assignment -name QIP_FILE imem.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

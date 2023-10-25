@@ -2,7 +2,10 @@
 module skeleton_tb();
 	
     reg clock, reset;
-    /* 
+
+    //wire processor_clock, imem_clock, dmem_clock, regfile_clock;
+	 //skeleton my_skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_clock);
+/* 
         Create four clocks for each module from the original input "clock".
         These four outputs will be used to run the clocked elements of your processor on the grading side. 
         You should output the clocks you have decided to use for the imem, dmem, regfile, and processor 
@@ -10,8 +13,13 @@ module skeleton_tb();
         based on proper functioning with this clock.
     */
     wire processor_clock, imem_clock, dmem_clock, regfile_clock;
-	 skeleton my_skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_clock);
+	 clk_dffe clk2(clock,reset, clock_2, clock_2_);
+	 clk_dffe clk4(clock_2,reset, clock_4, clock_4_);
 	 
+	 assign regfile_clock = clock_4_;
+	 assign processor_clock = clock_4_;
+	 assign imem_clock = clock;
+	 assign dmem_clock = ~clock;
 	/** IMEM **/
 	// Figure out how to generate a Quartus syncram component and commit the generated verilog file.
 	// Make sure you configure it correctly!
@@ -81,7 +89,6 @@ module skeleton_tb();
         data_readRegA,                  // I: Data from port A of regfile
         data_readRegB                   // I: Data from port B of regfile
     );
-	
 		
 // ********************************************************************************************* //
 	// Clock generator
@@ -99,9 +106,10 @@ module skeleton_tb();
 		clock = 1'b0; // at time 0
 		reset = 1'b1; // assert reset
 		
-	//	@(negedge clock);  // wait until next negative edge of clock
-	//	@(negedge clock);  // wait until next negative edge of clock
-	#20	reset = 1'b0; 		 // de-assert reset
+		@(negedge clock);  // wait until next negative edge of clock
+		@(negedge clock);  // wait until next negative edge of clock
+		reset = 1'b0; 		 // de-assert reset
+
 		
 		#10000
 		$display($time, " << The simulation completed >>");

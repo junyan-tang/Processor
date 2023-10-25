@@ -4,9 +4,19 @@ module clock_divider_by2( clk, rst, out_clk);
 	input rst;
 	always @(posedge clk)
 		begin
-			if(rst)
+			if(~rst)
 				out_clk <= 1'b0;
 			else
 				out_clk <= ~out_clk;
 		end
+endmodule
+
+module clk_dffe(clk,reset,out,out_);
+
+	input clk,reset;
+	output out,out_;
+
+	dffe_ref dff_ins(out,~out,clk,1'b1,reset);
+	assign out_ = ~out;
+
 endmodule
