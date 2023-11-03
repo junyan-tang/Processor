@@ -17,8 +17,8 @@ BEGIN
 0003 : 00101000110001000111111111111111;
     -- addi $4, $0, 1			# r4 = 1
 0004 : 00101001000000000000000000000001;
-    -- add $6, $1, $4			# r6 = 65535 + 1 = 65536  (normal addition) (then how about overflow addition?)
-0005 : 00000001100000100100000000000000;
+    -- add $6, $3, $4			# r6 = 65535 + 1 = 65536  (normal addition) (then how about overflow addition?)
+0005 : 00000001100001100100000000000000;
     -- sll $7, $4, 31			# r7 = r4 << 31 = 0x80000000(hex) = -2147483648(decimal)
 0006 : 00000001110010000000111110010000;
     -- sub $9, $1, $4			# r9 = r1 - r4 = 65535 - 1 = 65534 (normal sub) (then how about overflow sub?)

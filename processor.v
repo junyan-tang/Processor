@@ -94,16 +94,21 @@ module processor(
     //instruction
 	 wire [4:0] opcode,rd,rs,rt,shamt,Func;
 	 wire [16:0] Immediate;
+	 wire [26:0] T;
 	 
 	 //signal
 	 wire Rwe,ALUinB,DMwe,Rwd, Rdst,add,addi,sub;
+	 wire JP,bne,blt, jr, jal, setx, bex;
+	 //Jump
+	 wire bne2, blt2, br;
 	 
 	 //I-type
 	 wire [31:0] Immediate_full;
+	 wire [31:0] T_full;
 	 wire [31:0] data_B;
 	 
 	 //Regfile
-	 wire [4:0] Reg_d,Reg_t;
+	 wire [4:0] Reg_s,Reg_d,Reg_t,Reg_d2;
 	 wire [31:0] Reg_datawrite;
 	 wire isr0;
 	 
@@ -111,12 +116,27 @@ module processor(
 	 wire isNotEqual, isLessThan, overflow;
 	 wire [4:0] ALUop;
 	 wire [31:0] ALU_result;
-	 wire [31:0] ALU_result_overflow;
+	 wire [31:0] ALU_result_overflow,setx_result,jal_result;
 	 
 	 //PC
-	 wire [11:0] PCplus1;
+	 wire [11:0] PCplus1,PCplusN,br_result,jp_result,jr_result;
+	 wire [31:0] PCplus1_Full;
 	 plus1 plus1_0(address_imem,PCplus1);
-	 reg_12bit PC(address_imem,PCplus1,clock,1'b1,reset);
+	 SX_PC sx_pc(PCplus1, PCplus1_Full);
+	 plusN plusN_0(PCplus1, q_imem[11:0], PCplusN);
+	 
+	 //Jump
+	and(bne2, bne, isNotEqual);
+	and(blt2, blt, isLessThan);
+	or(br, bne2, blt2);
+	
+	assign br_result=br?PCplusN:PCplus1;
+	assign jp_result=JP?q_imem[11:0]:br_result;
+	assign jr_result=jr?data_readRegA[11:0]:jp_result;
+	 
+	 reg_12bit PC(address_imem,jr_result,clock,1'b1,reset);
+	 
+	 
 	 
 	 
 	 
@@ -128,23 +148,28 @@ module processor(
 	 assign shamt = q_imem[11:7];
 	 assign Func = q_imem[6:2];
 	 assign Immediate = q_imem[16:0];
+	 assign T=q_imem[26:0];
 	 
-	 Control control0(opcode,Func,Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd,add,addi,sub);
+	 Control control0(opcode,Func,Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd,JP,bne,blt,jr,jal,setx,bex,add,addi,sub);
 	 
 	 //Regfile 
-	 assign Reg_d=overflow?(add?5'b11110:(addi?5'b11110:(sub?5'b11110:rd))):rd;
+	 assign Reg_d=overflow?(add?5'b11110:(addi?5'b11110:(sub?5'b11110:rd))):(setx?5'b11110:rd);
+	 assign Reg_d2= jal?5'b11111:Reg_d;
 	 assign Reg_t=DMwe?rd:rt;
+	 assign Reg_s=bex?5'b11110:rs;
+	 
 	 
     assign ctrl_writeEnable = Rwe;
-    assign ctrl_writeReg = Reg_d;
-	 assign ctrl_readRegA = rs;
+    assign ctrl_writeReg = Reg_d2;
+	 assign ctrl_readRegA = Reg_s;
 	 assign ctrl_readRegB = Reg_t;
-    assign data_writeReg = isr0?0:(Rwd?q_dmem:ALU_result_overflow);
+    assign data_writeReg = isr0?0:(Rwd?q_dmem:jal_result);
 	 
 	 assign isr0 = Reg_d[4]?0:(Reg_d[3]?0:(Reg_d[2]?0:(Reg_d[1]?0:(Reg_d[0]?0:1))));
 	 
 	 //I-type
 	 SX SX0(Immediate,Immediate_full);
+	 SX_T SX1(T,T_full);
 	 assign data_B = ALUinB?Immediate_full:data_readRegB;
 	 
 	 //alu
@@ -159,6 +184,10 @@ module processor(
 			.overflow          (overflow)
 	);
 	assign ALU_result_overflow=overflow?(add?1:(addi?2:(sub?3:ALU_result))):ALU_result;
+	assign setx_result= setx?T_full:ALU_result_overflow;
+	assign jal_result= jal?PCplus1_Full:setx_result;
+	
+	
 	
 	//data mem
 	assign wren = DMwe;
