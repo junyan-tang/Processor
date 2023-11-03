@@ -3,7 +3,7 @@
  - Date: 10/18/2023
 
 ### Design Description
-This design implements a single-cycle 32-bit processor. The top-level entity("skeleton") includes processor, instruction memory, data memory and regfile. In this project, we implement some basic functionalities of a processor based on MIPS ISA. Specifically, the following R-type and I-type instructions: _add_, _sub_, _and_, _or_, _sll_, _sra_, _sw_, _lw_, _addi_.
+This design implements a single-cycle 32-bit processor. The top-level entity("skeleton") includes processor, instruction memory, data memory and regfile. In this project, we implement some basic functionalities of a processor based on MIPS ISA. Specifically, the following R-type and I-type instructions: _add_, _sub_, _and_, _or_, _sll_, _sra_, _sw_, _lw_, _addi_. We also include some J-type and JII-type instructions: _j_, _bne_, _jal_, _jr_, _blt_, _bex_, _setx_.
 
 **skeleton.v**
 <br> This is a wrapper around the processor to provide certain control signals and interfaces to memory elements. It has two inputs, clock signal and reset signal. The outputs are imem_clock, dmem_clock, processor_clock and regfile_clock, which represent the clock signal of these components respectively. Frequency of regfile & processor clock is one quarter of those two memory clock frequency. The clock of data memory is half a cycle behind instruction memory's clock.
@@ -21,7 +21,7 @@ This design implements a single-cycle 32-bit processor. The top-level entity("sk
 <br> Instruction memory is written by .mif file. It is a 1-port ROM on chip memory. Its 'q' output bus is 32 bits wide and it has 4096 32-bit words of memory.
 
 **alu.v**
-<br> Arithmetic Logic Unit.
+<br> Arithmetic Logic Unit. It performs mathematical and logical operations, including 
 
 **regfile.v**
 <br> Register File.
