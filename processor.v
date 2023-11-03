@@ -101,6 +101,7 @@ module processor(
 	 wire JP,bne,blt, jr, jal, setx, bex;
 	 //Jump
 	 wire bne2, blt2, br,blt3;
+	 wire bex_do,jp_do;
 	 
 	 //I-type
 	 wire [31:0] Immediate_full;
@@ -108,7 +109,7 @@ module processor(
 	 wire [31:0] data_B;
 	 
 	 //Regfile
-	 wire [4:0] Reg_s,Reg_d,Reg_t,Reg_d2;
+	 wire [4:0] Reg_s,Reg_d,Reg_t,Reg_d2,Reg_t2;
 	 wire [31:0] Reg_datawrite;
 	 wire isr0;
 	 
@@ -131,9 +132,14 @@ module processor(
 	and(blt3, blt, blt2);
 	or(br, bne2, blt3);
 	
+	and(bex_do,bex,isNotEqual);
+	or(jp_do,JP,bex_do);
+	
 	assign br_result=br?PCplusN:PCplus1;
-	assign jp_result=JP?q_imem[11:0]:br_result;
-	assign jr_result=jr?data_readRegA[11:0]:jp_result;
+	
+	assign jp_result=jp_do?q_imem[11:0]:br_result;
+	
+	assign jr_result=jr?data_readRegB[11:0]:jp_result;
 	 
 	 reg_12bit PC(address_imem,jr_result,clock,1'b1,reset);
 	 
@@ -157,16 +163,17 @@ module processor(
 	 assign Reg_d=overflow?(add?5'b11110:(addi?5'b11110:(sub?5'b11110:rd))):(setx?5'b11110:rd);
 	 assign Reg_d2= jal?5'b11111:Reg_d;
 	 assign Reg_t=DMwe?rd:rt;
+	 assign Reg_t2=bex?5'b00000:Reg_t;
 	 assign Reg_s=bex?5'b11110:rs;
 	 
 	 
     assign ctrl_writeEnable = Rwe;
     assign ctrl_writeReg = Reg_d2;
 	 assign ctrl_readRegA = Reg_s;
-	 assign ctrl_readRegB = Reg_t;
+	 assign ctrl_readRegB = Reg_t2;
     assign data_writeReg = isr0?0:(Rwd?q_dmem:jal_result);
 	 
-	 assign isr0 = Reg_d[4]?0:(Reg_d[3]?0:(Reg_d[2]?0:(Reg_d[1]?0:(Reg_d[0]?0:1))));
+	 assign isr0 = Reg_d2[4]?0:(Reg_d2[3]?0:(Reg_d2[2]?0:(Reg_d2[1]?0:(Reg_d2[0]?0:1))));
 	 
 	 //I-type
 	 SX SX0(Immediate,Immediate_full);

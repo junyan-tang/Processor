@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Thu Nov 02 20:58:18 2023
+Thu Nov 02 23:16:10 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -57,7 +57,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 02 20:58:18 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 02 23:16:10 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; skeleton                                    ;
@@ -1605,7 +1605,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 02 20:58:07 2023
+    Info: Processing started: Thu Nov 02 23:16:00 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1696,14 +1696,14 @@ Info (12128): Elaborating entity "altsyncram_0jf1" for hierarchy "dmem:my_dmem|a
 Info (12128): Elaborating entity "regfile" for hierarchy "regfile:my_regfile" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 83
 Warning (10240): Verilog HDL Always Construct warning at regfile.v(14): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.0/checkpoint4/regfile.v Line: 14
 Info (12128): Elaborating entity "processor" for hierarchy "processor:my_processor" File: C:/intelFPGA_lite/17.0/checkpoint4/skeleton.v Line: 109
-Warning (10230): Verilog HDL assignment warning at processor.v(169): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 169
-Info (12128): Elaborating entity "plus1" for hierarchy "processor:my_processor|plus1:plus1_0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 124
+Warning (10230): Verilog HDL assignment warning at processor.v(176): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 176
+Info (12128): Elaborating entity "plus1" for hierarchy "processor:my_processor|plus1:plus1_0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 125
 Info (12128): Elaborating entity "alu" for hierarchy "processor:my_processor|plus1:plus1_0|alu:alu_insn" File: C:/intelFPGA_lite/17.0/checkpoint4/plus1.v Line: 16
 Warning (10270): Verilog HDL Case Statement warning at alu.v(25): incomplete case statement has no default case item File: C:/intelFPGA_lite/17.0/checkpoint4/alu.v Line: 25
-Info (12128): Elaborating entity "SX_PC" for hierarchy "processor:my_processor|SX_PC:sx_pc" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 125
-Info (12128): Elaborating entity "plusN" for hierarchy "processor:my_processor|plusN:plusN_0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 126
-Info (12128): Elaborating entity "reg_12bit" for hierarchy "processor:my_processor|reg_12bit:PC" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 138
-Info (12128): Elaborating entity "Control" for hierarchy "processor:my_processor|Control:control0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 154
+Info (12128): Elaborating entity "SX_PC" for hierarchy "processor:my_processor|SX_PC:sx_pc" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 126
+Info (12128): Elaborating entity "plusN" for hierarchy "processor:my_processor|plusN:plusN_0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 127
+Info (12128): Elaborating entity "reg_12bit" for hierarchy "processor:my_processor|reg_12bit:PC" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 144
+Info (12128): Elaborating entity "Control" for hierarchy "processor:my_processor|Control:control0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 160
 Warning (10230): Verilog HDL assignment warning at Control.v(18): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 18
 Warning (10230): Verilog HDL assignment warning at Control.v(21): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 21
 Warning (10230): Verilog HDL assignment warning at Control.v(24): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 24
@@ -1721,8 +1721,8 @@ Warning (10230): Verilog HDL assignment warning at Control.v(64): truncated valu
 Warning (10230): Verilog HDL assignment warning at Control.v(68): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 68
 Warning (10230): Verilog HDL assignment warning at Control.v(72): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 72
 Warning (10230): Verilog HDL assignment warning at Control.v(78): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/checkpoint4/Control.v Line: 78
-Info (12128): Elaborating entity "SX" for hierarchy "processor:my_processor|SX:SX0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 172
-Info (12128): Elaborating entity "SX_T" for hierarchy "processor:my_processor|SX_T:SX1" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 173
+Info (12128): Elaborating entity "SX" for hierarchy "processor:my_processor|SX:SX0" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 179
+Info (12128): Elaborating entity "SX_T" for hierarchy "processor:my_processor|SX_T:SX1" File: C:/intelFPGA_lite/17.0/checkpoint4/processor.v Line: 180
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "dmem:my_dmem|altsyncram:altsyncram_component|altsyncram_0jf1:auto_generated|q_a[0]" File: C:/intelFPGA_lite/17.0/checkpoint4/db/altsyncram_0jf1.tdf Line: 37
@@ -1798,9 +1798,9 @@ Info (21057): Implemented 8 device resources after synthesis - the final resourc
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 2 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
-    Info: Peak virtual memory: 4801 megabytes
-    Info: Processing ended: Thu Nov 02 20:58:18 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 4802 megabytes
+    Info: Processing ended: Thu Nov 02 23:16:10 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 

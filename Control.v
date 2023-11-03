@@ -61,7 +61,7 @@ module Control(
 	assign setx = opcode[4]?(opcode[3]?0:(opcode[2]?(opcode[1]?0:(opcode[0]?1:0)):0)):0;
 	
 	//Rwe
-	assign Rwe = op?1:(addi?1:(lw?1:0));
+	assign Rwe = op?1:(addi?1:(lw?1:(jal?1:(setx?1:0))));
 	//Rdst
 	assign Rdst = ~op;
 	//ALUinB
@@ -75,5 +75,5 @@ module Control(
 	//BR
 	//assign BR = blt?1:(bne?1:0);
 	//JP
-	assign JP = j?1:(jal?1:(bex?1:0));
+	assign JP = j?1:(jal?1:0);
 endmodule
