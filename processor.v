@@ -100,7 +100,7 @@ module processor(
 	 wire Rwe,ALUinB,DMwe,Rwd, Rdst,add,addi,sub;
 	 wire JP,bne,blt, jr, jal, setx, bex;
 	 //Jump
-	 wire bne2, blt2, br;
+	 wire bne2, blt2, br,blt3;
 	 
 	 //I-type
 	 wire [31:0] Immediate_full;
@@ -127,8 +127,9 @@ module processor(
 	 
 	 //Jump
 	and(bne2, bne, isNotEqual);
-	and(blt2, blt, isLessThan);
-	or(br, bne2, blt2);
+	and(blt2, isNotEqual, ~isLessThan);
+	and(blt3, blt, blt2);
+	or(br, bne2, blt3);
 	
 	assign br_result=br?PCplusN:PCplus1;
 	assign jp_result=JP?q_imem[11:0]:br_result;
