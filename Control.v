@@ -1,13 +1,13 @@
 module Control(
 	opcode,Func,
 	Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd,JP, 
-	bne, blt, jr, jal, setx, bex,
+	bne, blt, jr, jal, setx, bex, Sdt,
 	add,addi,sub
 );
 	input [4:0] opcode;
 	input [4:0] Func;
 	output Rwe,Rdst,ALUinB,DMwe,Rwd,JP;
-	output bne, blt, jr, jal, setx, bex;
+	output bne, blt, jr, jal, setx, bex, Sdt;
 	output add,addi,sub;
 	output [4:0] ALUop;
 	
@@ -25,15 +25,6 @@ module Control(
 	
 	//sub  00000(00001)
 	assign sub = op?(Func[4]?0:(Func[3]?0:(Func[2]?0:(Func[1]?0:(Func[0]?1:0))))):0;
-	
-	//and  00000(00010)
-	//assign And = op?(Func[4]?0:(Func[3]?0:(Func[2]?0:(Func[1]?(Func[0]?0:1):0)))):0;
-	//or   00000(00011)
-	//assign Or =  op?(Func[4]?0:(Func[3]?0:(Func[2]?0:(Func[1]?(Func[0]?0:1):0)))):0;
-	//sll  00000(00100)
-	//assign sll = op?(Func[4]?0:(Func[3]?0:(Func[2]?(Func[1]?(Func[0]?0:1):0):0))):0;
-	//sra  00000(00101)
-	//assign sra = op?(Func[4]?0:(Func[3]?0:(Func[2]?(Func[1]?0:(Func[0]?1:0):0)))):0;
 	
 	//sw 00111
 	assign sw = opcode[4]?0:(opcode[3]?0:(opcode[2]?(opcode[1]?(opcode[0]?1:0):0):0));
@@ -69,7 +60,8 @@ module Control(
 	//ALUop
 	assign ALUop = ALUinB?5'b00000:Func;
 	//DMwe
-	assign DMwe = sw?1:(jr?1:(blt?1:(bne?1:0)));
+	assign Sdt = sw?1:(jr?1:(blt?1:(bne?1:0)));
+	assign DMwe = sw?1:0;
 	//Rwd
 	assign Rwd = lw;
 	//BR
