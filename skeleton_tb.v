@@ -2,16 +2,6 @@
 module skeleton_tb();
 	
     reg clock, reset;
-
-    //wire processor_clock, imem_clock, dmem_clock, regfile_clock;
-	 //skeleton my_skeleton(clock, reset, imem_clock, dmem_clock, processor_clock, regfile_clock);
-/* 
-        Create four clocks for each module from the original input "clock".
-        These four outputs will be used to run the clocked elements of your processor on the grading side. 
-        You should output the clocks you have decided to use for the imem, dmem, regfile, and processor 
-        (these may be inverted, divided, or unchanged from the original clock input). Your grade will be 
-        based on proper functioning with this clock.
-    */
     wire processor_clock, imem_clock, dmem_clock, regfile_clock;
 	 clk_dffe clk2(clock,reset, clock_2, clock_2_);
 	 clk_dffe clk4(clock_2,reset, clock_4, clock_4_);
@@ -20,9 +10,7 @@ module skeleton_tb();
 	 assign processor_clock = clock_4_;
 	 assign imem_clock = clock;
 	 assign dmem_clock = ~clock;
-	/** IMEM **/
-	// Figure out how to generate a Quartus syncram component and commit the generated verilog file.
-	// Make sure you configure it correctly!
+
 	wire [11:0] address_imem;
 	wire [31:0] q_imem;
     imem my_imem(
@@ -31,9 +19,6 @@ module skeleton_tb();
         .q          (q_imem)                   // the raw instruction
     );
 
-    /** DMEM **/
-    // Figure out how to generate a Quartus syncram component and commit the generated verilog file.
-    // Make sure you configure it correctly!
     wire [11:0] address_dmem;
     wire [31:0] data;
     wire wren;
@@ -47,7 +32,6 @@ module skeleton_tb();
     );
 
     /** REGFILE **/
-    // Instantiate your regfile
     wire ctrl_writeEnable;
     wire [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
     wire [31:0] data_writeReg;
