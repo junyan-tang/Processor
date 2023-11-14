@@ -98,7 +98,7 @@ module processor(
 	 
 	 //signal
 	 wire Rwe,ALUinB,DMwe,Rwd, Rdst,add,addi,sub;
-	 wire JP,bne,blt, jr, jal, setx, bex;
+	 wire JP,bne,blt, jr, jal, setx, bex, Sdt;
 	 //Jump
 	 wire bne2, blt2, br,blt3;
 	 wire bex_do,jp_do;
@@ -142,11 +142,7 @@ module processor(
 	assign jr_result=jr?data_readRegB[11:0]:jp_result;
 	 
 	 reg_12bit PC(address_imem,jr_result,clock,1'b1,reset);
-	 
-	 
-	 
-	 
-	 
+	 	 
 	 //instruction
 	 assign opcode = q_imem[31:27];
 	 assign rd = q_imem[26:22];
@@ -157,12 +153,12 @@ module processor(
 	 assign Immediate = q_imem[16:0];
 	 assign T=q_imem[26:0];
 	 
-	 Control control0(opcode,Func,Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd,JP,bne,blt,jr,jal,setx,bex,add,addi,sub);
+	Control control0(opcode,Func,Rwe,Rdst,ALUinB,ALUop,DMwe,Rwd,JP,bne,blt,jr,jal,setx,bex,Sdt,add,addi,sub);
 	 
 	 //Regfile 
-	 assign Reg_d=overflow?(add?5'b11110:(addi?5'b11110:(sub?5'b11110:rd))):(setx?5'b11110:rd);
+	assign Reg_d=overflow?(add?5'b11110:(addi?5'b11110:(sub?5'b11110:(setx?5'b11110:rd)))):(setx?5'b11110:rd);
 	 assign Reg_d2= jal?5'b11111:Reg_d;
-	 assign Reg_t=DMwe?rd:rt;
+	 assign Reg_t=Sdt?rd:rt;
 	 assign Reg_t2=bex?5'b00000:Reg_t;
 	 assign Reg_s=bex?5'b11110:rs;
 	 
