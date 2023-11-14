@@ -1,5 +1,5 @@
 # Processor
- - Author: Xueyi Fu(xf52) , Junyan Tang(jt418)
+ - Author: Xueyi Fu, Junyan Tang
  - Date: 10/18/2023
 
 ### Design Description
