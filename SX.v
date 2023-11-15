@@ -24,7 +24,7 @@ module SX_T(
 	
 	genvar i;
 	generate for (i=27;i<32;i=i+1) begin:SX_T_loop
-		assign bits32[i]=bits27[26];
+		assign bits32[i]=1'b0;
 	end
 	endgenerate
 	
