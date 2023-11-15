@@ -34,7 +34,7 @@ jal 28 		# pc21, go to pc28, $31 = 22
 addi $1, $1, 1  # pc22, r1 = r1 + 1
 addi $2, $2, 2  # pc23, r2 = r2 + 2
 
-setx -1 	# pc24, r30 = -1 (actually negative numbers are not allowed, you can just delete this insn)
+setx -1 	# pc24, r30 = -1 (actually negative number isn't allowed, you can just delete this insn)
 setx 1 		# pc25, r30 = 1
 
 add $1, $2, $3  # pc26, r1 = r2 + r3
